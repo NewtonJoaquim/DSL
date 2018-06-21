@@ -948,13 +948,22 @@ public interface LinhaDeProducaoPackage extends EPackage {
 	int TRANSPORT__FROM = RESOURCE_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Sends To Fabrication</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSPORT__SENDS_TO_FABRICATION = RESOURCE_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Transport</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSPORT_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 4;
+	int TRANSPORT_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Compute Time</em>' operation.
@@ -1156,13 +1165,22 @@ public interface LinhaDeProducaoPackage extends EPackage {
 	int FABRICATION__TO = RESOURCE_FEATURE_COUNT + 14;
 
 	/**
+	 * The feature id for the '<em><b>Sends To Transport</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FABRICATION__SENDS_TO_TRANSPORT = RESOURCE_FEATURE_COUNT + 15;
+
+	/**
 	 * The number of structural features of the '<em>Fabrication</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FABRICATION_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 15;
+	int FABRICATION_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 16;
 
 	/**
 	 * The operation id for the '<em>Compute Time</em>' operation.
@@ -1809,6 +1827,17 @@ public interface LinhaDeProducaoPackage extends EPackage {
 	EReference getTransport_From();
 
 	/**
+	 * Returns the meta object for the reference '{@link linhaDeProducao.Transport#getSendsToFabrication <em>Sends To Fabrication</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Sends To Fabrication</em>'.
+	 * @see linhaDeProducao.Transport#getSendsToFabrication()
+	 * @see #getTransport()
+	 * @generated
+	 */
+	EReference getTransport_SendsToFabrication();
+
+	/**
 	 * Returns the meta object for the '{@link linhaDeProducao.Transport#computeTime() <em>Compute Time</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2002,6 +2031,17 @@ public interface LinhaDeProducaoPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getFabrication_To();
+
+	/**
+	 * Returns the meta object for the reference '{@link linhaDeProducao.Fabrication#getSendsToTransport <em>Sends To Transport</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Sends To Transport</em>'.
+	 * @see linhaDeProducao.Fabrication#getSendsToTransport()
+	 * @see #getFabrication()
+	 * @generated
+	 */
+	EReference getFabrication_SendsToTransport();
 
 	/**
 	 * Returns the meta object for the '{@link linhaDeProducao.Fabrication#computeTime() <em>Compute Time</em>}' operation.
@@ -2530,6 +2570,14 @@ public interface LinhaDeProducaoPackage extends EPackage {
 		EReference TRANSPORT__FROM = eINSTANCE.getTransport_From();
 
 		/**
+		 * The meta object literal for the '<em><b>Sends To Fabrication</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRANSPORT__SENDS_TO_FABRICATION = eINSTANCE.getTransport_SendsToFabrication();
+
+		/**
 		 * The meta object literal for the '<em><b>Compute Time</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2674,6 +2722,14 @@ public interface LinhaDeProducaoPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FABRICATION__TO = eINSTANCE.getFabrication_To();
+
+		/**
+		 * The meta object literal for the '<em><b>Sends To Transport</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FABRICATION__SENDS_TO_TRANSPORT = eINSTANCE.getFabrication_SendsToTransport();
 
 		/**
 		 * The meta object literal for the '<em><b>Compute Time</b></em>' operation.

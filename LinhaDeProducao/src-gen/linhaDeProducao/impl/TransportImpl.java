@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link linhaDeProducao.impl.TransportImpl#getDistMovi <em>Dist Movi</em>}</li>
  *   <li>{@link linhaDeProducao.impl.TransportImpl#getCusMovi <em>Cus Movi</em>}</li>
  *   <li>{@link linhaDeProducao.impl.TransportImpl#getFrom <em>From</em>}</li>
+ *   <li>{@link linhaDeProducao.impl.TransportImpl#getSendsToFabrication <em>Sends To Fabrication</em>}</li>
  * </ul>
  *
  * @generated
@@ -100,6 +101,16 @@ public class TransportImpl extends ResourceImpl implements Transport {
 	 * @ordered
 	 */
 	protected Fabrication from;
+
+	/**
+	 * The cached value of the '{@link #getSendsToFabrication() <em>Sends To Fabrication</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSendsToFabrication()
+	 * @generated
+	 * @ordered
+	 */
+	protected Fabrication sendsToFabrication;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -259,6 +270,47 @@ public class TransportImpl extends ResourceImpl implements Transport {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Fabrication getSendsToFabrication() {
+		if (sendsToFabrication != null && sendsToFabrication.eIsProxy()) {
+			InternalEObject oldSendsToFabrication = (InternalEObject) sendsToFabrication;
+			sendsToFabrication = (Fabrication) eResolveProxy(oldSendsToFabrication);
+			if (sendsToFabrication != oldSendsToFabrication) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							LinhaDeProducaoPackage.TRANSPORT__SENDS_TO_FABRICATION, oldSendsToFabrication,
+							sendsToFabrication));
+			}
+		}
+		return sendsToFabrication;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Fabrication basicGetSendsToFabrication() {
+		return sendsToFabrication;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSendsToFabrication(Fabrication newSendsToFabrication) {
+		Fabrication oldSendsToFabrication = sendsToFabrication;
+		sendsToFabrication = newSendsToFabrication;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					LinhaDeProducaoPackage.TRANSPORT__SENDS_TO_FABRICATION, oldSendsToFabrication, sendsToFabrication));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -303,6 +355,10 @@ public class TransportImpl extends ResourceImpl implements Transport {
 			if (resolve)
 				return getFrom();
 			return basicGetFrom();
+		case LinhaDeProducaoPackage.TRANSPORT__SENDS_TO_FABRICATION:
+			if (resolve)
+				return getSendsToFabrication();
+			return basicGetSendsToFabrication();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -326,6 +382,9 @@ public class TransportImpl extends ResourceImpl implements Transport {
 			return;
 		case LinhaDeProducaoPackage.TRANSPORT__FROM:
 			setFrom((Fabrication) newValue);
+			return;
+		case LinhaDeProducaoPackage.TRANSPORT__SENDS_TO_FABRICATION:
+			setSendsToFabrication((Fabrication) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -351,6 +410,9 @@ public class TransportImpl extends ResourceImpl implements Transport {
 		case LinhaDeProducaoPackage.TRANSPORT__FROM:
 			setFrom((Fabrication) null);
 			return;
+		case LinhaDeProducaoPackage.TRANSPORT__SENDS_TO_FABRICATION:
+			setSendsToFabrication((Fabrication) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -371,6 +433,8 @@ public class TransportImpl extends ResourceImpl implements Transport {
 			return cusMovi != CUS_MOVI_EDEFAULT;
 		case LinhaDeProducaoPackage.TRANSPORT__FROM:
 			return from != null;
+		case LinhaDeProducaoPackage.TRANSPORT__SENDS_TO_FABRICATION:
+			return sendsToFabrication != null;
 		}
 		return super.eIsSet(featureID);
 	}

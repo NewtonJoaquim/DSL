@@ -69,6 +69,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Transport/distMovi"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Transport/cusMovi"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference linhaDeProducao.ecore#//Transport/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference linhaDeProducao.ecore#//Transport/sendsToFabrication"/>
       <genOperations ecoreOperation="linhaDeProducao.ecore#//Transport/computeTime"/>
       <genOperations ecoreOperation="linhaDeProducao.ecore#//Transport/computeCost"/>
     </genClasses>
@@ -88,6 +89,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Fabrication/vidaFerr"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Fabrication/trocaFerr"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference linhaDeProducao.ecore#//Fabrication/to"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference linhaDeProducao.ecore#//Fabrication/sendsToTransport"/>
       <genOperations ecoreOperation="linhaDeProducao.ecore#//Fabrication/computeTime"/>
       <genOperations ecoreOperation="linhaDeProducao.ecore#//Fabrication/computeCost"/>
     </genClasses>

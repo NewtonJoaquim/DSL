@@ -61,6 +61,7 @@ public class FabricationItemProvider extends ResourceItemProvider {
 			addVidaFerrPropertyDescriptor(object);
 			addTrocaFerrPropertyDescriptor(object);
 			addToPropertyDescriptor(object);
+			addSendsToTransportPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -286,6 +287,21 @@ public class FabricationItemProvider extends ResourceItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_Fabrication_to_feature",
 								"_UI_Fabrication_type"),
 						LinhaDeProducaoPackage.Literals.FABRICATION__TO, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Sends To Transport feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSendsToTransportPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_Fabrication_sendsToTransport_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_Fabrication_sendsToTransport_feature",
+						"_UI_Fabrication_type"),
+				LinhaDeProducaoPackage.Literals.FABRICATION__SENDS_TO_TRANSPORT, true, false, true, null, null, null));
 	}
 
 	/**

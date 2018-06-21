@@ -45,6 +45,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link linhaDeProducao.impl.FabricationImpl#getVidaFerr <em>Vida Ferr</em>}</li>
  *   <li>{@link linhaDeProducao.impl.FabricationImpl#getTrocaFerr <em>Troca Ferr</em>}</li>
  *   <li>{@link linhaDeProducao.impl.FabricationImpl#getTo <em>To</em>}</li>
+ *   <li>{@link linhaDeProducao.impl.FabricationImpl#getSendsToTransport <em>Sends To Transport</em>}</li>
  * </ul>
  *
  * @generated
@@ -329,6 +330,16 @@ public class FabricationImpl extends ResourceImpl implements Fabrication {
 	 * @ordered
 	 */
 	protected Transport to;
+
+	/**
+	 * The cached value of the '{@link #getSendsToTransport() <em>Sends To Transport</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSendsToTransport()
+	 * @generated
+	 * @ordered
+	 */
+	protected Transport sendsToTransport;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -721,6 +732,47 @@ public class FabricationImpl extends ResourceImpl implements Fabrication {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Transport getSendsToTransport() {
+		if (sendsToTransport != null && sendsToTransport.eIsProxy()) {
+			InternalEObject oldSendsToTransport = (InternalEObject) sendsToTransport;
+			sendsToTransport = (Transport) eResolveProxy(oldSendsToTransport);
+			if (sendsToTransport != oldSendsToTransport) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							LinhaDeProducaoPackage.FABRICATION__SENDS_TO_TRANSPORT, oldSendsToTransport,
+							sendsToTransport));
+			}
+		}
+		return sendsToTransport;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Transport basicGetSendsToTransport() {
+		return sendsToTransport;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSendsToTransport(Transport newSendsToTransport) {
+		Transport oldSendsToTransport = sendsToTransport;
+		sendsToTransport = newSendsToTransport;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					LinhaDeProducaoPackage.FABRICATION__SENDS_TO_TRANSPORT, oldSendsToTransport, sendsToTransport));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -789,6 +841,10 @@ public class FabricationImpl extends ResourceImpl implements Fabrication {
 			if (resolve)
 				return getTo();
 			return basicGetTo();
+		case LinhaDeProducaoPackage.FABRICATION__SENDS_TO_TRANSPORT:
+			if (resolve)
+				return getSendsToTransport();
+			return basicGetSendsToTransport();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -848,6 +904,9 @@ public class FabricationImpl extends ResourceImpl implements Fabrication {
 		case LinhaDeProducaoPackage.FABRICATION__TO:
 			setTo((Transport) newValue);
 			return;
+		case LinhaDeProducaoPackage.FABRICATION__SENDS_TO_TRANSPORT:
+			setSendsToTransport((Transport) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -905,6 +964,9 @@ public class FabricationImpl extends ResourceImpl implements Fabrication {
 		case LinhaDeProducaoPackage.FABRICATION__TO:
 			setTo((Transport) null);
 			return;
+		case LinhaDeProducaoPackage.FABRICATION__SENDS_TO_TRANSPORT:
+			setSendsToTransport((Transport) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -947,6 +1009,8 @@ public class FabricationImpl extends ResourceImpl implements Fabrication {
 			return trocaFerr != TROCA_FERR_EDEFAULT;
 		case LinhaDeProducaoPackage.FABRICATION__TO:
 			return to != null;
+		case LinhaDeProducaoPackage.FABRICATION__SENDS_TO_TRANSPORT:
+			return sendsToTransport != null;
 		}
 		return super.eIsSet(featureID);
 	}

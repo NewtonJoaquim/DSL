@@ -48,6 +48,7 @@ public class TransportItemProvider extends ResourceItemProvider {
 			addDistMoviPropertyDescriptor(object);
 			addCusMoviPropertyDescriptor(object);
 			addFromPropertyDescriptor(object);
+			addSendsToFabricationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -113,6 +114,22 @@ public class TransportItemProvider extends ResourceItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_Transport_from_feature",
 								"_UI_Transport_type"),
 						LinhaDeProducaoPackage.Literals.TRANSPORT__FROM, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Sends To Fabrication feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSendsToFabricationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Transport_sendsToFabrication_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Transport_sendsToFabrication_feature",
+								"_UI_Transport_type"),
+						LinhaDeProducaoPackage.Literals.TRANSPORT__SENDS_TO_FABRICATION, true, false, true, null, null,
+						null));
 	}
 
 	/**

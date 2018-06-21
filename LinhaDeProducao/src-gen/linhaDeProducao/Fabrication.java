@@ -28,6 +28,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link linhaDeProducao.Fabrication#getVidaFerr <em>Vida Ferr</em>}</li>
  *   <li>{@link linhaDeProducao.Fabrication#getTrocaFerr <em>Troca Ferr</em>}</li>
  *   <li>{@link linhaDeProducao.Fabrication#getTo <em>To</em>}</li>
+ *   <li>{@link linhaDeProducao.Fabrication#getSendsToTransport <em>Sends To Transport</em>}</li>
  * </ul>
  *
  * @see linhaDeProducao.LinhaDeProducaoPackage#getFabrication()
@@ -416,6 +417,32 @@ public interface Fabrication extends Resource {
 	 * @generated
 	 */
 	void setTo(Transport value);
+
+	/**
+	 * Returns the value of the '<em><b>Sends To Transport</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Sends To Transport</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Sends To Transport</em>' reference.
+	 * @see #setSendsToTransport(Transport)
+	 * @see linhaDeProducao.LinhaDeProducaoPackage#getFabrication_SendsToTransport()
+	 * @model
+	 * @generated
+	 */
+	Transport getSendsToTransport();
+
+	/**
+	 * Sets the value of the '{@link linhaDeProducao.Fabrication#getSendsToTransport <em>Sends To Transport</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Sends To Transport</em>' reference.
+	 * @see #getSendsToTransport()
+	 * @generated
+	 */
+	void setSendsToTransport(Transport value);
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -15,6 +15,7 @@ package linhaDeProducao;
  *   <li>{@link linhaDeProducao.Transport#getDistMovi <em>Dist Movi</em>}</li>
  *   <li>{@link linhaDeProducao.Transport#getCusMovi <em>Cus Movi</em>}</li>
  *   <li>{@link linhaDeProducao.Transport#getFrom <em>From</em>}</li>
+ *   <li>{@link linhaDeProducao.Transport#getSendsToFabrication <em>Sends To Fabrication</em>}</li>
  * </ul>
  *
  * @see linhaDeProducao.LinhaDeProducaoPackage#getTransport()
@@ -127,6 +128,32 @@ public interface Transport extends Resource {
 	 * @generated
 	 */
 	void setFrom(Fabrication value);
+
+	/**
+	 * Returns the value of the '<em><b>Sends To Fabrication</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Sends To Fabrication</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Sends To Fabrication</em>' reference.
+	 * @see #setSendsToFabrication(Fabrication)
+	 * @see linhaDeProducao.LinhaDeProducaoPackage#getTransport_SendsToFabrication()
+	 * @model required="true"
+	 * @generated
+	 */
+	Fabrication getSendsToFabrication();
+
+	/**
+	 * Sets the value of the '{@link linhaDeProducao.Transport#getSendsToFabrication <em>Sends To Fabrication</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Sends To Fabrication</em>' reference.
+	 * @see #getSendsToFabrication()
+	 * @generated
+	 */
+	void setSendsToFabrication(Fabrication value);
 
 	/**
 	 * <!-- begin-user-doc -->
