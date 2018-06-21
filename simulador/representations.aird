@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:linhaDeProducao="http://eclipse.com/obeoum/projects/linhaDeProducao" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis xmi:id="_lks7YFSAEeiplroxGvtyQA" selectedViews="_pUf4gF00EeiOzLn1EzWgAQ" version="12.1.0.201708031200">
+    <semanticResources>My.linhadeproducao</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" xmi:id="_e9ao4FSBEeiplroxGvtyQA">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='LinhaDeProducao']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_T5lSkFSCEeiplroxGvtyQA" name="fsdfsdgsdg" repPath="#_T5i2UFSCEeiplroxGvtyQA">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='LinhaDeProducao']/@ownedRepresentations[name='simulation']"/>
+        <target xmi:type="linhaDeProducao:Simulation" href="My.linhadeproducao#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" xmi:id="_pUf4gF00EeiOzLn1EzWgAQ">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_qI5kIF3oEeitcouiUqi4aw" name="new simulacao" repPath="#_qHaWYF3oEeitcouiUqi4aw">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']"/>
+        <target xmi:type="linhaDeProducao:Simulation" href="My.linhadeproducao#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram xmi:id="_T5krgFSCEeiplroxGvtyQA" name="fsdfsdgsdg" uid="_T5i2UFSCEeiplroxGvtyQA">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_T5krgVSCEeiplroxGvtyQA" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_T5krglSCEeiplroxGvtyQA"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_T5lSkVSCEeiplroxGvtyQA" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_T5lSklSCEeiplroxGvtyQA" type="Sirius" element="_T5krgFSCEeiplroxGvtyQA" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_Yaq4IFSCEeiplroxGvtyQA" type="2001" element="_YapC8FSCEeiplroxGvtyQA">
+          <children xmi:type="notation:Node" xmi:id="_Yaq4I1SCEeiplroxGvtyQA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_Yaq4JFSCEeiplroxGvtyQA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_YarfMFSCEeiplroxGvtyQA" type="3003" element="_YapqAFSCEeiplroxGvtyQA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_YarfMVSCEeiplroxGvtyQA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YarfMlSCEeiplroxGvtyQA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Yaq4IVSCEeiplroxGvtyQA" fontName="Ubuntu" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Yaq4IlSCEeiplroxGvtyQA" x="105" y="50" width="206" height="121"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_T5lSk1SCEeiplroxGvtyQA"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_YapC8FSCEeiplroxGvtyQA" name="piece" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="linhaDeProducao:Piece" href="My.linhadeproducao#//@piece"/>
+      <semanticElements xmi:type="linhaDeProducao:Piece" href="My.linhadeproducao#//@piece"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" xmi:id="_YapqAFSCEeiplroxGvtyQA" labelPosition="node">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='LinhaDeProducao']/@ownedRepresentations[name='simulation']/@defaultLayer/@nodeMappings[name='piece']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='LinhaDeProducao']/@ownedRepresentations[name='simulation']/@defaultLayer/@nodeMappings[name='piece']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='LinhaDeProducao']/@ownedRepresentations[name='simulation']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_T5krhFSCEeiplroxGvtyQA"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='LinhaDeProducao']/@ownedRepresentations[name='simulation']/@defaultLayer"/>
+    <target xmi:type="linhaDeProducao:Simulation" href="My.linhadeproducao#/"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram xmi:id="_qI15wF3oEeitcouiUqi4aw" name="new simulacao" uid="_qHaWYF3oEeitcouiUqi4aw">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_qI15wV3oEeitcouiUqi4aw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_qI15wl3oEeitcouiUqi4aw"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_qJ0xMF3oEeitcouiUqi4aw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_qJ0xMV3oEeitcouiUqi4aw" type="Sirius" element="_qI15wF3oEeitcouiUqi4aw" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_qKOZ0F3oEeitcouiUqi4aw" type="2001" element="_qI2g0F3oEeitcouiUqi4aw">
+          <children xmi:type="notation:Node" xmi:id="_qKoCcF3oEeitcouiUqi4aw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_qKoCcV3oEeitcouiUqi4aw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_qLCSIF3oEeitcouiUqi4aw" type="3017" element="_qI2g0V3oEeitcouiUqi4aw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_qLCSIV3oEeitcouiUqi4aw" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qLCSIl3oEeitcouiUqi4aw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_qKPA4F3oEeitcouiUqi4aw" fontName="Ubuntu" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qKPA4V3oEeitcouiUqi4aw" x="30" y="255" width="96" height="86"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_qK-nwF3oEeitcouiUqi4aw" type="2001" element="_qI2g0l3oEeitcouiUqi4aw">
+          <children xmi:type="notation:Node" xmi:id="_qK_O0F3oEeitcouiUqi4aw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_qK_O0V3oEeitcouiUqi4aw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_qLDgQF3oEeitcouiUqi4aw" type="3001" element="_qI2g013oEeitcouiUqi4aw">
+            <children xmi:type="notation:Node" xmi:id="_qLEHUF3oEeitcouiUqi4aw" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_qLEHUV3oEeitcouiUqi4aw" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_qLiocF3oEeitcouiUqi4aw" type="3002" element="_qI2g1F3oEeitcouiUqi4aw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_qLiocV3oEeitcouiUqi4aw" fontName="Ubuntu"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qLiocl3oEeitcouiUqi4aw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_qLDgQV3oEeitcouiUqi4aw" fontName="Ubuntu" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qLDgQl3oEeitcouiUqi4aw" x="25" y="-22" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_qLdI4F3oEeitcouiUqi4aw" type="3001" element="_qI2g1V3oEeitcouiUqi4aw">
+            <children xmi:type="notation:Node" xmi:id="_qLdI413oEeitcouiUqi4aw" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_qLdI5F3oEeitcouiUqi4aw" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_qLjPgF3oEeitcouiUqi4aw" type="3002" element="_qI2g1l3oEeitcouiUqi4aw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_qLjPgV3oEeitcouiUqi4aw" fontName="Ubuntu"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qLjPgl3oEeitcouiUqi4aw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_qLdI4V3oEeitcouiUqi4aw" fontName="Ubuntu" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qLdI4l3oEeitcouiUqi4aw" x="-22" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_qLeXAF3oEeitcouiUqi4aw" type="3001" element="_qI2g113oEeitcouiUqi4aw">
+            <children xmi:type="notation:Node" xmi:id="_qLe-EF3oEeitcouiUqi4aw" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_qLe-EV3oEeitcouiUqi4aw" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_qLj2kF3oEeitcouiUqi4aw" type="3002" element="_qI2g2F3oEeitcouiUqi4aw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_qLj2kV3oEeitcouiUqi4aw" fontName="Ubuntu"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qLj2kl3oEeitcouiUqi4aw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_qLeXAV3oEeitcouiUqi4aw" fontName="Ubuntu" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qLeXAl3oEeitcouiUqi4aw" x="-22" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_qLgMMF3oEeitcouiUqi4aw" type="3001" element="_qI2g2V3oEeitcouiUqi4aw">
+            <children xmi:type="notation:Node" xmi:id="_qLgMM13oEeitcouiUqi4aw" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_qLgMNF3oEeitcouiUqi4aw" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_qLkdoF3oEeitcouiUqi4aw" type="3002" element="_qI2g2l3oEeitcouiUqi4aw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_qLkdoV3oEeitcouiUqi4aw" fontName="Ubuntu"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qLkdol3oEeitcouiUqi4aw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_qLgMMV3oEeitcouiUqi4aw" fontName="Ubuntu" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qLgMMl3oEeitcouiUqi4aw" x="98" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_qLiBYF3oEeitcouiUqi4aw" type="3003" element="_qI2g213oEeitcouiUqi4aw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_qLiBYV3oEeitcouiUqi4aw" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qLiBYl3oEeitcouiUqi4aw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_qK-nwV3oEeitcouiUqi4aw" fontName="Ubuntu" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qK-nwl3oEeitcouiUqi4aw" x="150" y="100" width="106" height="101"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_qK_O0l3oEeitcouiUqi4aw" type="2001" element="_qI2g3F3oEeitcouiUqi4aw">
+          <children xmi:type="notation:Node" xmi:id="_qK_14F3oEeitcouiUqi4aw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_qK_14V3oEeitcouiUqi4aw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_qLkdo13oEeitcouiUqi4aw" type="3003" element="_qI2g3V3oEeitcouiUqi4aw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_qLkdpF3oEeitcouiUqi4aw" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qLkdpV3oEeitcouiUqi4aw"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_BGTykF9_Eein7709hJMz8A" type="3001" element="_BGEiAF9_Eein7709hJMz8A">
+            <children xmi:type="notation:Node" xmi:id="_BGc8gF9_Eein7709hJMz8A" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_BGc8gV9_Eein7709hJMz8A" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_BGhN8F9_Eein7709hJMz8A" type="3002" element="_BGFwIF9_Eein7709hJMz8A">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_BGhN8V9_Eein7709hJMz8A" fontName="Ubuntu"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BGhN8l9_Eein7709hJMz8A"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_BGTykV9_Eein7709hJMz8A" fontName="Ubuntu" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BGTykl9_Eein7709hJMz8A" x="55" y="95" width="30" height="30"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_qK_O013oEeitcouiUqi4aw" fontName="Ubuntu" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qK_O1F3oEeitcouiUqi4aw" x="380" y="254" width="116" height="103"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_Hp7eUHV9EeiSupk-I6O-eQ" type="2001" element="_HpMegHV9EeiSupk-I6O-eQ">
+          <children xmi:type="notation:Node" xmi:id="_Hp8scHV9EeiSupk-I6O-eQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_Hp8scXV9EeiSupk-I6O-eQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Hp-hoHV9EeiSupk-I6O-eQ" type="3003" element="_HpMegXV9EeiSupk-I6O-eQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Hp-hoXV9EeiSupk-I6O-eQ" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Hp-honV9EeiSupk-I6O-eQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Hp7eUXV9EeiSupk-I6O-eQ" fontName="Ubuntu" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Hp7eUnV9EeiSupk-I6O-eQ" x="185" y="294" width="90" height="47"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_XyhVsHWBEeiGkdOV7hxNgQ" type="2001" element="_XxhQIHWBEeiGkdOV7hxNgQ">
+          <children xmi:type="notation:Node" xmi:id="_XymOMHWBEeiGkdOV7hxNgQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_XymOMXWBEeiGkdOV7hxNgQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_XyoqcHWBEeiGkdOV7hxNgQ" type="3016" element="_XxjsYHWBEeiGkdOV7hxNgQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_XyoqcXWBEeiGkdOV7hxNgQ" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XyoqcnWBEeiGkdOV7hxNgQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_XyhVsXWBEeiGkdOV7hxNgQ" fontName="Ubuntu" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XyhVsnWBEeiGkdOV7hxNgQ" x="530" y="155" width="60" height="60"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_qJ0xMl3oEeitcouiUqi4aw"/>
+        <edges xmi:type="notation:Edge" xmi:id="_ZyMHYHWBEeiGkdOV7hxNgQ" type="4001" element="_ZyCWYHWBEeiGkdOV7hxNgQ" source="_qK-nwF3oEeitcouiUqi4aw" target="_XyhVsHWBEeiGkdOV7hxNgQ">
+          <children xmi:type="notation:Node" xmi:id="_ZyMucHWBEeiGkdOV7hxNgQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZyMucXWBEeiGkdOV7hxNgQ" y="-11"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ZyN8kHWBEeiGkdOV7hxNgQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZyN8kXWBEeiGkdOV7hxNgQ" y="9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ZyOjoHWBEeiGkdOV7hxNgQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZyOjoXWBEeiGkdOV7hxNgQ" y="8"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_ZyMHYXWBEeiGkdOV7hxNgQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_ZyMHYnWBEeiGkdOV7hxNgQ" fontName="Ubuntu" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZyMHY3WBEeiGkdOV7hxNgQ" points="[53, 5, -304, -30]$[327, 32, -30, -3]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZyRm8HWBEeiGkdOV7hxNgQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZyRm8XWBEeiGkdOV7hxNgQ" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_ZySOAHWBEeiGkdOV7hxNgQ" type="4001" element="_ZyGAwHWBEeiGkdOV7hxNgQ" source="_XyhVsHWBEeiGkdOV7hxNgQ" target="_qK-nwF3oEeitcouiUqi4aw">
+          <children xmi:type="notation:Node" xmi:id="_ZySOBHWBEeiGkdOV7hxNgQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZySOBXWBEeiGkdOV7hxNgQ" x="41" y="-8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ZySOBnWBEeiGkdOV7hxNgQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZySOB3WBEeiGkdOV7hxNgQ" x="13" y="11"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ZyS1EHWBEeiGkdOV7hxNgQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZyS1EXWBEeiGkdOV7hxNgQ" x="13" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_ZySOAXWBEeiGkdOV7hxNgQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_ZySOAnWBEeiGkdOV7hxNgQ" fontName="Ubuntu" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZySOA3WBEeiGkdOV7hxNgQ" points="[-30, -7, 327, 28]$[-207, -42, 150, -7]$[-304, -42, 53, -7]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZyS1EnWBEeiGkdOV7hxNgQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZyS1E3WBEeiGkdOV7hxNgQ" id="(0.5,0.5)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_qI2g0F3oEeitcouiUqi4aw" name="piece" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="linhaDeProducao:Piece" href="My.linhadeproducao#//@piece"/>
+      <semanticElements xmi:type="linhaDeProducao:Piece" href="My.linhadeproducao#//@piece"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Lozenge" xmi:id="_qI2g0V3oEeitcouiUqi4aw" labelPosition="node">
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='piece']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='piece']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_qI2g0l3oEeitcouiUqi4aw" name="Furadeira" outgoingEdges="_ZyCWYHWBEeiGkdOV7hxNgQ" incomingEdges="_ZyGAwHWBEeiGkdOV7hxNgQ" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="linhaDeProducao:Fabrication" href="My.linhadeproducao#//@resource.0"/>
+      <semanticElements xmi:type="linhaDeProducao:Fabrication" href="My.linhadeproducao#//@resource.0"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_qI2g013oEeitcouiUqi4aw" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="linhaDeProducao:Rotational" href="My.linhadeproducao#//@resource.0/@feature.0"/>
+        <semanticElements xmi:type="linhaDeProducao:Rotational" href="My.linhadeproducao#//@resource.0/@feature.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Dot" xmi:id="_qI2g1F3oEeitcouiUqi4aw" labelPosition="node">
+          <description xmi:type="style:DotDescription" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']/@borderedNodeMappings[name='rotationalFeature']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']/@borderedNodeMappings[name='rotationalFeature']"/>
+      </ownedBorderedNodes>
+      <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_qI2g1V3oEeitcouiUqi4aw" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="linhaDeProducao:Prismatic" href="My.linhadeproducao#//@resource.0/@feature.1"/>
+        <semanticElements xmi:type="linhaDeProducao:Prismatic" href="My.linhadeproducao#//@resource.0/@feature.1"/>
+        <ownedStyle xmi:type="diagram:Dot" xmi:id="_qI2g1l3oEeitcouiUqi4aw" labelPosition="node" backgroundColor="194,239,255">
+          <description xmi:type="style:DotDescription" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']/@borderedNodeMappings[name='prismaticFeature']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']/@borderedNodeMappings[name='prismaticFeature']"/>
+      </ownedBorderedNodes>
+      <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_qI2g113oEeitcouiUqi4aw" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="linhaDeProducao:Revolving" href="My.linhadeproducao#//@resource.0/@feature.2"/>
+        <semanticElements xmi:type="linhaDeProducao:Revolving" href="My.linhadeproducao#//@resource.0/@feature.2"/>
+        <ownedStyle xmi:type="diagram:Dot" xmi:id="_qI2g2F3oEeitcouiUqi4aw" labelPosition="node" backgroundColor="238,201,142">
+          <description xmi:type="style:DotDescription" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']/@borderedNodeMappings[name='revolvingFeature']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']/@borderedNodeMappings[name='revolvingFeature']"/>
+      </ownedBorderedNodes>
+      <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_qI2g2V3oEeitcouiUqi4aw" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="linhaDeProducao:Slab" href="My.linhadeproducao#//@resource.0/@feature.3"/>
+        <semanticElements xmi:type="linhaDeProducao:Slab" href="My.linhadeproducao#//@resource.0/@feature.3"/>
+        <ownedStyle xmi:type="diagram:Dot" xmi:id="_qI2g2l3oEeitcouiUqi4aw" labelPosition="node" backgroundColor="204,242,166">
+          <description xmi:type="style:DotDescription" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']/@borderedNodeMappings[name='slabFeature']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']/@borderedNodeMappings[name='slabFeature']"/>
+      </ownedBorderedNodes>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" xmi:id="_qI2g213oEeitcouiUqi4aw" labelPosition="node" color="252,233,79">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_qI2g3F3oEeitcouiUqi4aw" name="gfdgsff" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="linhaDeProducao:Fabrication" href="My.linhadeproducao#//@resource.1"/>
+      <semanticElements xmi:type="linhaDeProducao:Fabrication" href="My.linhadeproducao#//@resource.1"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_BGEiAF9_Eein7709hJMz8A" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="linhaDeProducao:Prismatic" href="My.linhadeproducao#//@resource.1/@feature.0"/>
+        <semanticElements xmi:type="linhaDeProducao:Prismatic" href="My.linhadeproducao#//@resource.1/@feature.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Dot" xmi:id="_BGFwIF9_Eein7709hJMz8A" labelPosition="node" backgroundColor="194,239,255">
+          <description xmi:type="style:DotDescription" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']/@borderedNodeMappings[name='prismaticFeature']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']/@borderedNodeMappings[name='prismaticFeature']"/>
+      </ownedBorderedNodes>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" xmi:id="_qI2g3V3oEeitcouiUqi4aw" labelPosition="node" color="252,233,79">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_HpMegHV9EeiSupk-I6O-eQ" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="linhaDeProducao:Fabrication" href="My.linhadeproducao#//@resource.2"/>
+      <semanticElements xmi:type="linhaDeProducao:Fabrication" href="My.linhadeproducao#//@resource.2"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" xmi:id="_HpMegXV9EeiSupk-I6O-eQ" labelPosition="node" color="252,233,79">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_XxhQIHWBEeiGkdOV7hxNgQ" outgoingEdges="_ZyGAwHWBEeiGkdOV7hxNgQ" incomingEdges="_ZyCWYHWBEeiGkdOV7hxNgQ" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="linhaDeProducao:Transport" href="My.linhadeproducao#//@resource.3"/>
+      <semanticElements xmi:type="linhaDeProducao:Transport" href="My.linhadeproducao#//@resource.3"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_XxjsYHWBEeiGkdOV7hxNgQ" labelPosition="node" color="252,175,62">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='transport']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='transport']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_ZyCWYHWBEeiGkdOV7hxNgQ" sourceNode="_qI2g0l3oEeitcouiUqi4aw" targetNode="_XxhQIHWBEeiGkdOV7hxNgQ">
+      <target xmi:type="linhaDeProducao:Fabrication" href="My.linhadeproducao#//@resource.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_ZyEyoHWBEeiGkdOV7hxNgQ" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@edgeMappings[name='Send']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_ZyEyoXWBEeiGkdOV7hxNgQ"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@edgeMappings[name='Send']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_ZyGAwHWBEeiGkdOV7hxNgQ" sourceNode="_XxhQIHWBEeiGkdOV7hxNgQ" targetNode="_qI2g0l3oEeitcouiUqi4aw">
+      <target xmi:type="linhaDeProducao:Transport" href="My.linhadeproducao#//@resource.3"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_ZyGAwXWBEeiGkdOV7hxNgQ" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@edgeMappings[name='Receive']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_ZyGAwnWBEeiGkdOV7hxNgQ"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@edgeMappings[name='Receive']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_qI2g4F3oEeitcouiUqi4aw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/linhaDeProducao.design/description/linhaDeProducao.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer"/>
+    <target xmi:type="linhaDeProducao:Simulation" href="My.linhadeproducao#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

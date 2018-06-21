@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/LinhaDeProducao/src-gen" creationIcons="false"
+    editDirectory="/LinhaDeProducao.edit/src-gen" editorDirectory="/LinhaDeProducao.editor/src-gen"
+    modelPluginID="LinhaDeProducao" modelName="LinhaDeProducao" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>linhaDeProducao.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="LinhaDeProducao" disposableProviderFactory="true" ecorePackage="linhaDeProducao.ecore#/">
+    <genClasses ecoreClass="linhaDeProducao.ecore#//Feature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Feature/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Feature/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Feature/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Feature/positionX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Feature/positionY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Feature/positionZ"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Feature/oritentation"/>
+      <genOperations ecoreOperation="linhaDeProducao.ecore#//Feature/areaFeature"/>
+      <genOperations ecoreOperation="linhaDeProducao.ecore#//Feature/volumeFeature"/>
+    </genClasses>
+    <genClasses ecoreClass="linhaDeProducao.ecore#//Piece">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Piece/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Piece/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Piece/material"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Piece/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Piece/length"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Piece/height"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference linhaDeProducao.ecore#//Piece/feature"/>
+      <genOperations ecoreOperation="linhaDeProducao.ecore#//Piece/volumePiece"/>
+    </genClasses>
+    <genClasses ecoreClass="linhaDeProducao.ecore#//Prismatic">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Prismatic/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Prismatic/heigth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Prismatic/length"/>
+      <genOperations ecoreOperation="linhaDeProducao.ecore#//Prismatic/areaFeature"/>
+      <genOperations ecoreOperation="linhaDeProducao.ecore#//Prismatic/volumeFeature"/>
+    </genClasses>
+    <genClasses ecoreClass="linhaDeProducao.ecore#//Rotational">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Rotational/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Rotational/diametroMenor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Rotational/diametroMaior"/>
+      <genOperations ecoreOperation="linhaDeProducao.ecore#//Rotational/areaFeature"/>
+      <genOperations ecoreOperation="linhaDeProducao.ecore#//Rotational/volumeFeature"/>
+    </genClasses>
+    <genClasses ecoreClass="linhaDeProducao.ecore#//Revolving">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Revolving/diameter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Revolving/height"/>
+      <genOperations ecoreOperation="linhaDeProducao.ecore#//Revolving/areaFeature"/>
+      <genOperations ecoreOperation="linhaDeProducao.ecore#//Revolving/volumeFeature"/>
+    </genClasses>
+    <genClasses ecoreClass="linhaDeProducao.ecore#//Slab">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Slab/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Slab/heigth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Slab/length"/>
+      <genOperations ecoreOperation="linhaDeProducao.ecore#//Slab/areaFeature"/>
+      <genOperations ecoreOperation="linhaDeProducao.ecore#//Slab/volumeFeature"/>
+    </genClasses>
+    <genClasses ecoreClass="linhaDeProducao.ecore#//Resource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Resource/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Resource/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Resource/type"/>
+      <genOperations ecoreOperation="linhaDeProducao.ecore#//Resource/computeTime"/>
+      <genOperations ecoreOperation="linhaDeProducao.ecore#//Resource/computeCost"/>
+    </genClasses>
+    <genClasses ecoreClass="linhaDeProducao.ecore#//Transport">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Transport/velMovi"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Transport/distMovi"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Transport/cusMovi"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference linhaDeProducao.ecore#//Transport/from"/>
+      <genOperations ecoreOperation="linhaDeProducao.ecore#//Transport/computeTime"/>
+      <genOperations ecoreOperation="linhaDeProducao.ecore#//Transport/computeCost"/>
+    </genClasses>
+    <genClasses ecoreClass="linhaDeProducao.ecore#//Fabrication">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference linhaDeProducao.ecore#//Fabrication/feature"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Fabrication/salarioOp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Fabrication/salarioMaq"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Fabrication/custoFerr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Fabrication/diamCorte"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Fabrication/profCorte"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Fabrication/compCorte"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Fabrication/avanco"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Fabrication/velCorte"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Fabrication/tempImpr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Fabrication/velAvanco"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Fabrication/taxaAcab"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Fabrication/vidaFerr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Fabrication/trocaFerr"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference linhaDeProducao.ecore#//Fabrication/to"/>
+      <genOperations ecoreOperation="linhaDeProducao.ecore#//Fabrication/computeTime"/>
+      <genOperations ecoreOperation="linhaDeProducao.ecore#//Fabrication/computeCost"/>
+    </genClasses>
+    <genClasses ecoreClass="linhaDeProducao.ecore#//Simulation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference linhaDeProducao.ecore#//Simulation/resource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference linhaDeProducao.ecore#//Simulation/piece"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute linhaDeProducao.ecore#//Simulation/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,37 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ */]
+[module generate('http://eclipse.com/obeoum/projects/linhaDeProducao')]
+
+
+[**
+ * The documentation of the template generateElement.
+ * @param aSimulation
+ */]
+[template public generateElement(aSimulation : Simulation)]
+[comment @main/]
+[file (aSimulation.piece.name.concat('.csv'), false, 'UTF-8')]
+	piece [aSimulation.piece.name/]	
+[/file]
+
+[file ('resources.csv', false, 'UTF-8')]
+
+	[for (aResource : Resource | aSimulation.resource)]
+		
+		[if(aResource.eClass() = Fabrication)]
+			fabrication [aResource.name/]
+			[for (aFeature : Feature | aResource.oclAsType(Fabrication).feature)]
+			feature [aFeature.name/]
+			[/for]
+
+		[/if]
+
+		[if(aResource.eClass() = Transport)]
+			transport [aResource.name/]
+		[/if]		
+
+	[/for]
+
+[/file]
+[/template]

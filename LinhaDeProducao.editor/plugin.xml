@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated linhaDeProducao -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="linhaDeProducao.presentation.LinhaDeProducaoModelWizardID"
+            name="%_UI_LinhaDeProducaoModelWizard_label"
+            class="linhaDeProducao.presentation.LinhaDeProducaoModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/LinhaDeProducaoModelFile.gif">
+         <description>%_UI_LinhaDeProducaoModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated linhaDeProducao -->
+      <editor
+            id="linhaDeProducao.presentation.LinhaDeProducaoEditorID"
+            name="%_UI_LinhaDeProducaoEditor_label"
+            icon="icons/full/obj16/LinhaDeProducaoModelFile.gif"
+            extensions="linhadeproducao"
+            class="linhaDeProducao.presentation.LinhaDeProducaoEditor"
+            contributorClass="linhaDeProducao.presentation.LinhaDeProducaoActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

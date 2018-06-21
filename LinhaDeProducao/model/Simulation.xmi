@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<linhaDeProducao:Simulation
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:linhaDeProducao="http://eclipse.com/obeoum/projects/linhaDeProducao"
+    xsi:schemaLocation="http://eclipse.com/obeoum/projects/linhaDeProducao linhaDeProducao.ecore"
+    name="Simulacao">
+  <piece name=""
+      material=""/>
+</linhaDeProducao:Simulation>
