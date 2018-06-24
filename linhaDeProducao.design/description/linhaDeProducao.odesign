@@ -124,9 +124,9 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
                 <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="sendsToFabrication" valueExpression="var:target"/>
                   <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@edgeMappings[name='Send']" variableName="SendView" sourceExpression="var:source" targetExpression="var:target"/>
                 </subModelOperations>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="sendsToTransport" valueExpression="var:target"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generate" name="org.eclipse.acceleo.linhaproducao">
-    <property name="ECLIPSE_HOME" value="../../../ObeoDesigner-Community"/>
-    <property name="ECLIPSE_WORKSPACE" value="../../../ObeoDesigner-Community/workspace"/>
+    <property name="ECLIPSE_HOME" value="../../../Programaçao/ObeoDesigner-Community"/>
+    <property name="ECLIPSE_WORKSPACE" value="../../../Programaçao/ObeoDesigner-Community/new-workspace"/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="org.eclipse.acceleo.linhaproducao.libraryclasspath">

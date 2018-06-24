@@ -12,7 +12,7 @@
 [template public generateElement(aSimulation : Simulation)]
 [comment @main/]
 [file (aSimulation.piece.name.concat('.csv'), false, 'UTF-8')]
-	piece [aSimulation.piece.name/]	
+	[aSimulation.piece.id/] [aSimulation.piece.name/]	[aSimulation.piece.material/] [aSimulation.piece.width/] [aSimulation.piece.length/] [aSimulation.piece.height/]
 [/file]
 
 [file ('resources.csv', false, 'UTF-8')]
@@ -20,15 +20,26 @@
 	[for (aResource : Resource | aSimulation.resource)]
 		
 		[if(aResource.eClass() = Fabrication)]
-			fabrication [aResource.name/]
+			[aResource.id/] [aResource.name/] Fabricacao [aResource.oclAsType(Fabrication).salarioOp/] [aResource.oclAsType(Fabrication).salarioMaq/] [aResource.oclAsType(Fabrication).custoFerr/] [aResource.oclAsType(Fabrication).diamCorte/] [aResource.oclAsType(Fabrication).profCorte/] [aResource.oclAsType(Fabrication).compCorte/] [aResource.oclAsType(Fabrication).avanco/] [aResource.oclAsType(Fabrication).velCorte/] [aResource.oclAsType(Fabrication).tempImpr/] [aResource.oclAsType(Fabrication).taxaAcab/] [aResource.oclAsType(Fabrication).vidaFerr/] [aResource.oclAsType(Fabrication).trocaFerr/] [aResource.oclAsType(Fabrication).capBroca/]
 			[for (aFeature : Feature | aResource.oclAsType(Fabrication).feature)]
-			feature [aFeature.name/]
+				[if (aFeature.eClass() = Prismatic)]
+					[aFeature.id/] [aFeature.codigo/] Prismatica [aFeature.name/] [aFeature.oclAsType(Prismatic).width/] [aFeature.oclAsType(Prismatic).length/] [aFeature.oclAsType(Prismatic).heigth/] 0 0 0 [aFeature.positionX/] [aFeature.positionY/] [aFeature.positionZ/]
+				[/if]
+				[if (aFeature.eClass() = Rotational)]
+					[aFeature.id/] [aFeature.codigo/] Rotacional [aFeature.name/] [aFeature.oclAsType(Rotational).width/] 0 0 [aFeature.oclAsType(Rotational).diametroMaior/] [aFeature.oclAsType(Rotational).diametroMenor/] 0 [aFeature.positionX/] [aFeature.positionY/] [aFeature.positionZ/]
+				[/if]
+				[if (aFeature.eClass() = Revolving)]
+					[aFeature.id/] [aFeature.codigo/] Circular [aFeature.name/] 0 0 [aFeature.oclAsType(Revolving).height/] 0 0 [aFeature.oclAsType(Revolving).diameter/] [aFeature.positionX/] [aFeature.positionY/] [aFeature.positionZ/]
+				[/if]
+				[if (aFeature.eClass() = Slab)]
+					[aFeature.id/] [aFeature.codigo/] Cavidade [aFeature.name/] [aFeature.oclAsType(Slab).width/] [aFeature.oclAsType(Slab).length/] [aFeature.oclAsType(Slab).heigth/] 0 0 0 [aFeature.positionX/] [aFeature.positionY/] [aFeature.positionZ/]
+				[/if]
 			[/for]
 
 		[/if]
 
 		[if(aResource.eClass() = Transport)]
-			transport [aResource.name/]
+			[aResource.id/] [aResource.name/] Transporte [aResource.oclAsType(Transport).tempImpr/] [aResource.oclAsType(Transport).velMovi/] [aResource.oclAsType(Transport).distMovi/] [aResource.oclAsType(Transport).cusMovi/]
 		[/if]		
 
 	[/for]

@@ -16,6 +16,8 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="oritentation" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codigo" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Piece">
     <eOperations name="volumePiece" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
@@ -86,6 +88,8 @@
         eOpposite="#//Fabrication/to"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sendsToFabrication" lowerBound="1"
         eType="#//Fabrication"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tempImpr" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Fabrication" eSuperTypes="#//Resource">
     <eOperations name="computeTime" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
@@ -121,6 +125,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="#//Transport"
         eOpposite="#//Transport/from"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sendsToTransport" eType="#//Transport"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="capBroca" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Simulation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="resource" upperBound="-1"
