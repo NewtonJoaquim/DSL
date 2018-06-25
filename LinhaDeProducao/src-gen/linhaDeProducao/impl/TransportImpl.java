@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link linhaDeProducao.impl.TransportImpl#getCusMovi <em>Cus Movi</em>}</li>
  *   <li>{@link linhaDeProducao.impl.TransportImpl#getFrom <em>From</em>}</li>
  *   <li>{@link linhaDeProducao.impl.TransportImpl#getSendsToFabrication <em>Sends To Fabrication</em>}</li>
+ *   <li>{@link linhaDeProducao.impl.TransportImpl#getTempImpr <em>Temp Impr</em>}</li>
  * </ul>
  *
  * @generated
@@ -111,6 +112,26 @@ public class TransportImpl extends ResourceImpl implements Transport {
 	 * @ordered
 	 */
 	protected Fabrication sendsToFabrication;
+
+	/**
+	 * The default value of the '{@link #getTempImpr() <em>Temp Impr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTempImpr()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double TEMP_IMPR_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getTempImpr() <em>Temp Impr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTempImpr()
+	 * @generated
+	 * @ordered
+	 */
+	protected double tempImpr = TEMP_IMPR_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -311,6 +332,28 @@ public class TransportImpl extends ResourceImpl implements Transport {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public double getTempImpr() {
+		return tempImpr;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTempImpr(double newTempImpr) {
+		double oldTempImpr = tempImpr;
+		tempImpr = newTempImpr;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LinhaDeProducaoPackage.TRANSPORT__TEMP_IMPR,
+					oldTempImpr, tempImpr));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -359,6 +402,8 @@ public class TransportImpl extends ResourceImpl implements Transport {
 			if (resolve)
 				return getSendsToFabrication();
 			return basicGetSendsToFabrication();
+		case LinhaDeProducaoPackage.TRANSPORT__TEMP_IMPR:
+			return getTempImpr();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -385,6 +430,9 @@ public class TransportImpl extends ResourceImpl implements Transport {
 			return;
 		case LinhaDeProducaoPackage.TRANSPORT__SENDS_TO_FABRICATION:
 			setSendsToFabrication((Fabrication) newValue);
+			return;
+		case LinhaDeProducaoPackage.TRANSPORT__TEMP_IMPR:
+			setTempImpr((Double) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -413,6 +461,9 @@ public class TransportImpl extends ResourceImpl implements Transport {
 		case LinhaDeProducaoPackage.TRANSPORT__SENDS_TO_FABRICATION:
 			setSendsToFabrication((Fabrication) null);
 			return;
+		case LinhaDeProducaoPackage.TRANSPORT__TEMP_IMPR:
+			setTempImpr(TEMP_IMPR_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -435,6 +486,8 @@ public class TransportImpl extends ResourceImpl implements Transport {
 			return from != null;
 		case LinhaDeProducaoPackage.TRANSPORT__SENDS_TO_FABRICATION:
 			return sendsToFabrication != null;
+		case LinhaDeProducaoPackage.TRANSPORT__TEMP_IMPR:
+			return tempImpr != TEMP_IMPR_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -456,6 +509,8 @@ public class TransportImpl extends ResourceImpl implements Transport {
 		result.append(distMovi);
 		result.append(", cusMovi: ");
 		result.append(cusMovi);
+		result.append(", tempImpr: ");
+		result.append(tempImpr);
 		result.append(')');
 		return result.toString();
 	}

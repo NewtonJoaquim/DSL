@@ -15,12 +15,12 @@
 	[aSimulation.piece.id/] [aSimulation.piece.name/]	[aSimulation.piece.material/] [aSimulation.piece.width/] [aSimulation.piece.length/] [aSimulation.piece.height/]
 [/file]
 
-[file ('resources.csv', false, 'UTF-8')]
+[file ('fabrication.csv', false, 'UTF-8')]
 
 	[for (aResource : Resource | aSimulation.resource)]
 		
 		[if(aResource.eClass() = Fabrication)]
-			[aResource.id/] [aResource.name/] Fabricacao [aResource.oclAsType(Fabrication).salarioOp/] [aResource.oclAsType(Fabrication).salarioMaq/] [aResource.oclAsType(Fabrication).custoFerr/] [aResource.oclAsType(Fabrication).diamCorte/] [aResource.oclAsType(Fabrication).profCorte/] [aResource.oclAsType(Fabrication).compCorte/] [aResource.oclAsType(Fabrication).avanco/] [aResource.oclAsType(Fabrication).velCorte/] [aResource.oclAsType(Fabrication).tempImpr/] [aResource.oclAsType(Fabrication).taxaAcab/] [aResource.oclAsType(Fabrication).vidaFerr/] [aResource.oclAsType(Fabrication).trocaFerr/] [aResource.oclAsType(Fabrication).capBroca/]
+			[aResource.id/] [aResource.name/] Fabricacao [aResource.oclAsType(Fabrication).salarioOp/] [aResource.oclAsType(Fabrication).salarioMaq/] [aResource.oclAsType(Fabrication).custoFerr/] [aResource.oclAsType(Fabrication).diamCorte/] [aResource.oclAsType(Fabrication).profCorte/] [aResource.oclAsType(Fabrication).compCorte/] [aResource.oclAsType(Fabrication).avanco/] [aResource.oclAsType(Fabrication).velCorte/] [aResource.oclAsType(Fabrication).tempImpr/] [aResource.oclAsType(Fabrication).taxaAcab/] [aResource.oclAsType(Fabrication).vidaFerr/] [aResource.oclAsType(Fabrication).trocaFerr/] [aResource.oclAsType(Fabrication).capBroca/] [aResource.oclAsType(Fabrication).sendsToTransport.id/]
 			[for (aFeature : Feature | aResource.oclAsType(Fabrication).feature)]
 				[if (aFeature.eClass() = Prismatic)]
 					[aFeature.id/] [aFeature.codigo/] Prismatica [aFeature.name/] [aFeature.oclAsType(Prismatic).width/] [aFeature.oclAsType(Prismatic).length/] [aFeature.oclAsType(Prismatic).heigth/] 0 0 0 [aFeature.positionX/] [aFeature.positionY/] [aFeature.positionZ/]
@@ -36,12 +36,17 @@
 				[/if]
 			[/for]
 
-		[/if]
-
-		[if(aResource.eClass() = Transport)]
-			[aResource.id/] [aResource.name/] Transporte [aResource.oclAsType(Transport).tempImpr/] [aResource.oclAsType(Transport).velMovi/] [aResource.oclAsType(Transport).distMovi/] [aResource.oclAsType(Transport).cusMovi/]
 		[/if]		
 
+	[/for]
+
+[/file]
+
+[file ('transport.csv', false, 'UTF-8')]
+	[for (aResource : Resource | aSimulation.resource)]
+		[if(aResource.eClass() = Transport)]
+			[aResource.id/] [aResource.name/] Transporte [aResource.oclAsType(Transport).tempImpr/] [aResource.oclAsType(Transport).velMovi/] [aResource.oclAsType(Transport).distMovi/] [aResource.oclAsType(Transport).cusMovi/] [aResource.oclAsType(Transport).sendsToFabrication.id/]
+		[/if]	
 	[/for]
 
 [/file]

@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link linhaDeProducao.Feature#getPositionY <em>Position Y</em>}</li>
  *   <li>{@link linhaDeProducao.Feature#getPositionZ <em>Position Z</em>}</li>
  *   <li>{@link linhaDeProducao.Feature#getOritentation <em>Oritentation</em>}</li>
+ *   <li>{@link linhaDeProducao.Feature#getCodigo <em>Codigo</em>}</li>
  * </ul>
  *
  * @see linhaDeProducao.LinhaDeProducaoPackage#getFeature()
@@ -208,6 +209,32 @@ public interface Feature extends EObject {
 	 * @generated
 	 */
 	void setOritentation(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Codigo</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Codigo</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Codigo</em>' attribute.
+	 * @see #setCodigo(int)
+	 * @see linhaDeProducao.LinhaDeProducaoPackage#getFeature_Codigo()
+	 * @model required="true"
+	 * @generated
+	 */
+	int getCodigo();
+
+	/**
+	 * Sets the value of the '{@link linhaDeProducao.Feature#getCodigo <em>Codigo</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Codigo</em>' attribute.
+	 * @see #getCodigo()
+	 * @generated
+	 */
+	void setCodigo(int value);
 
 	/**
 	 * <!-- begin-user-doc -->

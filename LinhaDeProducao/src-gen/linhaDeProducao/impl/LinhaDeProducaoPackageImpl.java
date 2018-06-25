@@ -240,6 +240,15 @@ public class LinhaDeProducaoPackageImpl extends EPackageImpl implements LinhaDeP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getFeature_Codigo() {
+		return (EAttribute) featureEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getFeature__AreaFeature() {
 		return featureEClass.getEOperations().get(0);
 	}
@@ -654,6 +663,15 @@ public class LinhaDeProducaoPackageImpl extends EPackageImpl implements LinhaDeP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getTransport_TempImpr() {
+		return (EAttribute) transportEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getTransport__ComputeTime() {
 		return transportEClass.getEOperations().get(0);
 	}
@@ -825,6 +843,15 @@ public class LinhaDeProducaoPackageImpl extends EPackageImpl implements LinhaDeP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getFabrication_CapBroca() {
+		return (EAttribute) fabricationEClass.getEStructuralFeatures().get(16);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getFabrication__ComputeTime() {
 		return fabricationEClass.getEOperations().get(0);
 	}
@@ -911,6 +938,7 @@ public class LinhaDeProducaoPackageImpl extends EPackageImpl implements LinhaDeP
 		createEAttribute(featureEClass, FEATURE__POSITION_Y);
 		createEAttribute(featureEClass, FEATURE__POSITION_Z);
 		createEAttribute(featureEClass, FEATURE__ORITENTATION);
+		createEAttribute(featureEClass, FEATURE__CODIGO);
 		createEOperation(featureEClass, FEATURE___AREA_FEATURE);
 		createEOperation(featureEClass, FEATURE___VOLUME_FEATURE);
 
@@ -964,6 +992,7 @@ public class LinhaDeProducaoPackageImpl extends EPackageImpl implements LinhaDeP
 		createEAttribute(transportEClass, TRANSPORT__CUS_MOVI);
 		createEReference(transportEClass, TRANSPORT__FROM);
 		createEReference(transportEClass, TRANSPORT__SENDS_TO_FABRICATION);
+		createEAttribute(transportEClass, TRANSPORT__TEMP_IMPR);
 		createEOperation(transportEClass, TRANSPORT___COMPUTE_TIME);
 		createEOperation(transportEClass, TRANSPORT___COMPUTE_COST);
 
@@ -984,6 +1013,7 @@ public class LinhaDeProducaoPackageImpl extends EPackageImpl implements LinhaDeP
 		createEAttribute(fabricationEClass, FABRICATION__TROCA_FERR);
 		createEReference(fabricationEClass, FABRICATION__TO);
 		createEReference(fabricationEClass, FABRICATION__SENDS_TO_TRANSPORT);
+		createEAttribute(fabricationEClass, FABRICATION__CAP_BROCA);
 		createEOperation(fabricationEClass, FABRICATION___COMPUTE_TIME);
 		createEOperation(fabricationEClass, FABRICATION___COMPUTE_COST);
 
@@ -1045,6 +1075,8 @@ public class LinhaDeProducaoPackageImpl extends EPackageImpl implements LinhaDeP
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFeature_Oritentation(), ecorePackage.getEInt(), "oritentation", null, 1, 1, Feature.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFeature_Codigo(), ecorePackage.getEInt(), "codigo", null, 1, 1, Feature.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getFeature__AreaFeature(), ecorePackage.getEDouble(), "areaFeature", 1, 1, IS_UNIQUE,
 				IS_ORDERED);
@@ -1157,6 +1189,8 @@ public class LinhaDeProducaoPackageImpl extends EPackageImpl implements LinhaDeP
 		initEReference(getTransport_SendsToFabrication(), this.getFabrication(), null, "sendsToFabrication", null, 1, 1,
 				Transport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTransport_TempImpr(), ecorePackage.getEDouble(), "tempImpr", null, 1, 1, Transport.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getTransport__ComputeTime(), ecorePackage.getEDouble(), "computeTime", 1, 1, IS_UNIQUE,
 				IS_ORDERED);
@@ -1209,6 +1243,8 @@ public class LinhaDeProducaoPackageImpl extends EPackageImpl implements LinhaDeP
 		initEReference(getFabrication_SendsToTransport(), this.getTransport(), null, "sendsToTransport", null, 0, 1,
 				Fabrication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFabrication_CapBroca(), ecorePackage.getEDouble(), "capBroca", null, 1, 1, Fabrication.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getFabrication__ComputeTime(), ecorePackage.getEDouble(), "computeTime", 1, 1, IS_UNIQUE,
 				IS_ORDERED);

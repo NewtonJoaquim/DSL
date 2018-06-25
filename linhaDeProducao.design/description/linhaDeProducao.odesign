@@ -7,7 +7,7 @@
         <nodeMappings name="piece" domainClass="linhaDeProducao::Piece">
           <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/LinhaDeProducao.edit/icons/images/brick.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="fabrication" domainClass="linhaDeProducao::Fabrication">
@@ -78,7 +78,9 @@
             <variable name="fabricationContainer"/>
             <viewVariable name="fabricationContainerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="linhaDeProducao::Fabrication" referenceName="resource" variableName="fabricationInstance"/>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="linhaDeProducao::Fabrication" referenceName="resource" variableName="fabricationInstance">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:fabricationInstance.ancestors().resource->size()"/>
+              </firstModelOperations>
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool:NodeCreationDescription" name="rotationalCreation" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']/@borderedNodeMappings[name='rotationalFeature']">
@@ -113,7 +115,9 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="linhaDeProducao::Transport" referenceName="resource"/>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="linhaDeProducao::Transport" referenceName="resource">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:instance.ancestors().resource->size()"/>
+              </firstModelOperations>
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool:EdgeCreationDescription" name="Send" edgeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@edgeMappings[name='Send']">

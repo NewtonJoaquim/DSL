@@ -131,13 +131,22 @@ public interface LinhaDeProducaoPackage extends EPackage {
 	int FEATURE__ORITENTATION = 6;
 
 	/**
+	 * The feature id for the '<em><b>Codigo</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__CODIGO = 7;
+
+	/**
 	 * The number of structural features of the '<em>Feature</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_FEATURE_COUNT = 7;
+	int FEATURE_FEATURE_COUNT = 8;
 
 	/**
 	 * The operation id for the '<em>Area Feature</em>' operation.
@@ -340,6 +349,15 @@ public interface LinhaDeProducaoPackage extends EPackage {
 	int PRISMATIC__ORITENTATION = FEATURE__ORITENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Codigo</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRISMATIC__CODIGO = FEATURE__CODIGO;
+
+	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -474,6 +492,15 @@ public interface LinhaDeProducaoPackage extends EPackage {
 	 * @ordered
 	 */
 	int ROTATIONAL__ORITENTATION = FEATURE__ORITENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Codigo</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROTATIONAL__CODIGO = FEATURE__CODIGO;
 
 	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -612,6 +639,15 @@ public interface LinhaDeProducaoPackage extends EPackage {
 	int REVOLVING__ORITENTATION = FEATURE__ORITENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Codigo</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REVOLVING__CODIGO = FEATURE__CODIGO;
+
+	/**
 	 * The feature id for the '<em><b>Diameter</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -737,6 +773,15 @@ public interface LinhaDeProducaoPackage extends EPackage {
 	 * @ordered
 	 */
 	int SLAB__ORITENTATION = FEATURE__ORITENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Codigo</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLAB__CODIGO = FEATURE__CODIGO;
 
 	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -957,13 +1002,22 @@ public interface LinhaDeProducaoPackage extends EPackage {
 	int TRANSPORT__SENDS_TO_FABRICATION = RESOURCE_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Temp Impr</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSPORT__TEMP_IMPR = RESOURCE_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Transport</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSPORT_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 5;
+	int TRANSPORT_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 6;
 
 	/**
 	 * The operation id for the '<em>Compute Time</em>' operation.
@@ -1174,13 +1228,22 @@ public interface LinhaDeProducaoPackage extends EPackage {
 	int FABRICATION__SENDS_TO_TRANSPORT = RESOURCE_FEATURE_COUNT + 15;
 
 	/**
+	 * The feature id for the '<em><b>Cap Broca</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FABRICATION__CAP_BROCA = RESOURCE_FEATURE_COUNT + 16;
+
+	/**
 	 * The number of structural features of the '<em>Fabrication</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FABRICATION_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 16;
+	int FABRICATION_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 17;
 
 	/**
 	 * The operation id for the '<em>Compute Time</em>' operation.
@@ -1350,6 +1413,17 @@ public interface LinhaDeProducaoPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getFeature_Oritentation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link linhaDeProducao.Feature#getCodigo <em>Codigo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Codigo</em>'.
+	 * @see linhaDeProducao.Feature#getCodigo()
+	 * @see #getFeature()
+	 * @generated
+	 */
+	EAttribute getFeature_Codigo();
 
 	/**
 	 * Returns the meta object for the '{@link linhaDeProducao.Feature#areaFeature() <em>Area Feature</em>}' operation.
@@ -1838,6 +1912,17 @@ public interface LinhaDeProducaoPackage extends EPackage {
 	EReference getTransport_SendsToFabrication();
 
 	/**
+	 * Returns the meta object for the attribute '{@link linhaDeProducao.Transport#getTempImpr <em>Temp Impr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Temp Impr</em>'.
+	 * @see linhaDeProducao.Transport#getTempImpr()
+	 * @see #getTransport()
+	 * @generated
+	 */
+	EAttribute getTransport_TempImpr();
+
+	/**
 	 * Returns the meta object for the '{@link linhaDeProducao.Transport#computeTime() <em>Compute Time</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2044,6 +2129,17 @@ public interface LinhaDeProducaoPackage extends EPackage {
 	EReference getFabrication_SendsToTransport();
 
 	/**
+	 * Returns the meta object for the attribute '{@link linhaDeProducao.Fabrication#getCapBroca <em>Cap Broca</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cap Broca</em>'.
+	 * @see linhaDeProducao.Fabrication#getCapBroca()
+	 * @see #getFabrication()
+	 * @generated
+	 */
+	EAttribute getFabrication_CapBroca();
+
+	/**
 	 * Returns the meta object for the '{@link linhaDeProducao.Fabrication#computeTime() <em>Compute Time</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2194,6 +2290,14 @@ public interface LinhaDeProducaoPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FEATURE__ORITENTATION = eINSTANCE.getFeature_Oritentation();
+
+		/**
+		 * The meta object literal for the '<em><b>Codigo</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FEATURE__CODIGO = eINSTANCE.getFeature_Codigo();
 
 		/**
 		 * The meta object literal for the '<em><b>Area Feature</b></em>' operation.
@@ -2578,6 +2682,14 @@ public interface LinhaDeProducaoPackage extends EPackage {
 		EReference TRANSPORT__SENDS_TO_FABRICATION = eINSTANCE.getTransport_SendsToFabrication();
 
 		/**
+		 * The meta object literal for the '<em><b>Temp Impr</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRANSPORT__TEMP_IMPR = eINSTANCE.getTransport_TempImpr();
+
+		/**
 		 * The meta object literal for the '<em><b>Compute Time</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2730,6 +2842,14 @@ public interface LinhaDeProducaoPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FABRICATION__SENDS_TO_TRANSPORT = eINSTANCE.getFabrication_SendsToTransport();
+
+		/**
+		 * The meta object literal for the '<em><b>Cap Broca</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FABRICATION__CAP_BROCA = eINSTANCE.getFabrication_CapBroca();
 
 		/**
 		 * The meta object literal for the '<em><b>Compute Time</b></em>' operation.

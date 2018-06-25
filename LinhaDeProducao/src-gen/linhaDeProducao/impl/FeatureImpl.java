@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link linhaDeProducao.impl.FeatureImpl#getPositionY <em>Position Y</em>}</li>
  *   <li>{@link linhaDeProducao.impl.FeatureImpl#getPositionZ <em>Position Z</em>}</li>
  *   <li>{@link linhaDeProducao.impl.FeatureImpl#getOritentation <em>Oritentation</em>}</li>
+ *   <li>{@link linhaDeProducao.impl.FeatureImpl#getCodigo <em>Codigo</em>}</li>
  * </ul>
  *
  * @generated
@@ -175,6 +176,26 @@ public abstract class FeatureImpl extends MinimalEObjectImpl.Container implement
 	 * @ordered
 	 */
 	protected int oritentation = ORITENTATION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCodigo() <em>Codigo</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCodigo()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int CODIGO_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getCodigo() <em>Codigo</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCodigo()
+	 * @generated
+	 * @ordered
+	 */
+	protected int codigo = CODIGO_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -351,6 +372,28 @@ public abstract class FeatureImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getCodigo() {
+		return codigo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCodigo(int newCodigo) {
+		int oldCodigo = codigo;
+		codigo = newCodigo;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LinhaDeProducaoPackage.FEATURE__CODIGO, oldCodigo,
+					codigo));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public double areaFeature() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -390,6 +433,8 @@ public abstract class FeatureImpl extends MinimalEObjectImpl.Container implement
 			return getPositionZ();
 		case LinhaDeProducaoPackage.FEATURE__ORITENTATION:
 			return getOritentation();
+		case LinhaDeProducaoPackage.FEATURE__CODIGO:
+			return getCodigo();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -422,6 +467,9 @@ public abstract class FeatureImpl extends MinimalEObjectImpl.Container implement
 			return;
 		case LinhaDeProducaoPackage.FEATURE__ORITENTATION:
 			setOritentation((Integer) newValue);
+			return;
+		case LinhaDeProducaoPackage.FEATURE__CODIGO:
+			setCodigo((Integer) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -456,6 +504,9 @@ public abstract class FeatureImpl extends MinimalEObjectImpl.Container implement
 		case LinhaDeProducaoPackage.FEATURE__ORITENTATION:
 			setOritentation(ORITENTATION_EDEFAULT);
 			return;
+		case LinhaDeProducaoPackage.FEATURE__CODIGO:
+			setCodigo(CODIGO_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -482,6 +533,8 @@ public abstract class FeatureImpl extends MinimalEObjectImpl.Container implement
 			return positionZ != POSITION_Z_EDEFAULT;
 		case LinhaDeProducaoPackage.FEATURE__ORITENTATION:
 			return oritentation != ORITENTATION_EDEFAULT;
+		case LinhaDeProducaoPackage.FEATURE__CODIGO:
+			return codigo != CODIGO_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -527,6 +580,8 @@ public abstract class FeatureImpl extends MinimalEObjectImpl.Container implement
 		result.append(positionZ);
 		result.append(", oritentation: ");
 		result.append(oritentation);
+		result.append(", codigo: ");
+		result.append(codigo);
 		result.append(')');
 		return result.toString();
 	}

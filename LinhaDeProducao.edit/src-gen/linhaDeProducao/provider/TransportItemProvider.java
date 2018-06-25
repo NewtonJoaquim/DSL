@@ -49,6 +49,7 @@ public class TransportItemProvider extends ResourceItemProvider {
 			addCusMoviPropertyDescriptor(object);
 			addFromPropertyDescriptor(object);
 			addSendsToFabricationPropertyDescriptor(object);
+			addTempImprPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -133,6 +134,22 @@ public class TransportItemProvider extends ResourceItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Temp Impr feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTempImprPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Transport_tempImpr_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Transport_tempImpr_feature",
+								"_UI_Transport_type"),
+						LinhaDeProducaoPackage.Literals.TRANSPORT__TEMP_IMPR, true, false, false,
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This returns Transport.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -181,6 +198,7 @@ public class TransportItemProvider extends ResourceItemProvider {
 		case LinhaDeProducaoPackage.TRANSPORT__VEL_MOVI:
 		case LinhaDeProducaoPackage.TRANSPORT__DIST_MOVI:
 		case LinhaDeProducaoPackage.TRANSPORT__CUS_MOVI:
+		case LinhaDeProducaoPackage.TRANSPORT__TEMP_IMPR:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

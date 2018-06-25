@@ -62,6 +62,7 @@ public class FabricationItemProvider extends ResourceItemProvider {
 			addTrocaFerrPropertyDescriptor(object);
 			addToPropertyDescriptor(object);
 			addSendsToTransportPropertyDescriptor(object);
+			addCapBrocaPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -305,6 +306,22 @@ public class FabricationItemProvider extends ResourceItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Cap Broca feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCapBrocaPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Fabrication_capBroca_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Fabrication_capBroca_feature",
+								"_UI_Fabrication_type"),
+						LinhaDeProducaoPackage.Literals.FABRICATION__CAP_BROCA, true, false, false,
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -393,6 +410,7 @@ public class FabricationItemProvider extends ResourceItemProvider {
 		case LinhaDeProducaoPackage.FABRICATION__TAXA_ACAB:
 		case LinhaDeProducaoPackage.FABRICATION__VIDA_FERR:
 		case LinhaDeProducaoPackage.FABRICATION__TROCA_FERR:
+		case LinhaDeProducaoPackage.FABRICATION__CAP_BROCA:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case LinhaDeProducaoPackage.FABRICATION__FEATURE:

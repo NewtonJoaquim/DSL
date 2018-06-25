@@ -60,6 +60,7 @@ public class FeatureItemProvider extends ItemProviderAdapter implements IEditing
 			addPositionYPropertyDescriptor(object);
 			addPositionZPropertyDescriptor(object);
 			addOritentationPropertyDescriptor(object);
+			addCodigoPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -174,6 +175,22 @@ public class FeatureItemProvider extends ItemProviderAdapter implements IEditing
 	}
 
 	/**
+	 * This adds a property descriptor for the Codigo feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCodigoPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Feature_codigo_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Feature_codigo_feature",
+								"_UI_Feature_type"),
+						LinhaDeProducaoPackage.Literals.FEATURE__CODIGO, true, false, false,
+						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This returns Feature.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -226,6 +243,7 @@ public class FeatureItemProvider extends ItemProviderAdapter implements IEditing
 		case LinhaDeProducaoPackage.FEATURE__POSITION_Y:
 		case LinhaDeProducaoPackage.FEATURE__POSITION_Z:
 		case LinhaDeProducaoPackage.FEATURE__ORITENTATION:
+		case LinhaDeProducaoPackage.FEATURE__CODIGO:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

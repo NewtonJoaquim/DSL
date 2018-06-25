@@ -29,6 +29,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link linhaDeProducao.Fabrication#getTrocaFerr <em>Troca Ferr</em>}</li>
  *   <li>{@link linhaDeProducao.Fabrication#getTo <em>To</em>}</li>
  *   <li>{@link linhaDeProducao.Fabrication#getSendsToTransport <em>Sends To Transport</em>}</li>
+ *   <li>{@link linhaDeProducao.Fabrication#getCapBroca <em>Cap Broca</em>}</li>
  * </ul>
  *
  * @see linhaDeProducao.LinhaDeProducaoPackage#getFabrication()
@@ -443,6 +444,32 @@ public interface Fabrication extends Resource {
 	 * @generated
 	 */
 	void setSendsToTransport(Transport value);
+
+	/**
+	 * Returns the value of the '<em><b>Cap Broca</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cap Broca</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cap Broca</em>' attribute.
+	 * @see #setCapBroca(double)
+	 * @see linhaDeProducao.LinhaDeProducaoPackage#getFabrication_CapBroca()
+	 * @model required="true"
+	 * @generated
+	 */
+	double getCapBroca();
+
+	/**
+	 * Sets the value of the '{@link linhaDeProducao.Fabrication#getCapBroca <em>Cap Broca</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Cap Broca</em>' attribute.
+	 * @see #getCapBroca()
+	 * @generated
+	 */
+	void setCapBroca(double value);
 
 	/**
 	 * <!-- begin-user-doc -->

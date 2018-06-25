@@ -46,6 +46,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link linhaDeProducao.impl.FabricationImpl#getTrocaFerr <em>Troca Ferr</em>}</li>
  *   <li>{@link linhaDeProducao.impl.FabricationImpl#getTo <em>To</em>}</li>
  *   <li>{@link linhaDeProducao.impl.FabricationImpl#getSendsToTransport <em>Sends To Transport</em>}</li>
+ *   <li>{@link linhaDeProducao.impl.FabricationImpl#getCapBroca <em>Cap Broca</em>}</li>
  * </ul>
  *
  * @generated
@@ -340,6 +341,26 @@ public class FabricationImpl extends ResourceImpl implements Fabrication {
 	 * @ordered
 	 */
 	protected Transport sendsToTransport;
+
+	/**
+	 * The default value of the '{@link #getCapBroca() <em>Cap Broca</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCapBroca()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double CAP_BROCA_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getCapBroca() <em>Cap Broca</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCapBroca()
+	 * @generated
+	 * @ordered
+	 */
+	protected double capBroca = CAP_BROCA_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -773,6 +794,28 @@ public class FabricationImpl extends ResourceImpl implements Fabrication {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public double getCapBroca() {
+		return capBroca;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCapBroca(double newCapBroca) {
+		double oldCapBroca = capBroca;
+		capBroca = newCapBroca;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LinhaDeProducaoPackage.FABRICATION__CAP_BROCA,
+					oldCapBroca, capBroca));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -845,6 +888,8 @@ public class FabricationImpl extends ResourceImpl implements Fabrication {
 			if (resolve)
 				return getSendsToTransport();
 			return basicGetSendsToTransport();
+		case LinhaDeProducaoPackage.FABRICATION__CAP_BROCA:
+			return getCapBroca();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -907,6 +952,9 @@ public class FabricationImpl extends ResourceImpl implements Fabrication {
 		case LinhaDeProducaoPackage.FABRICATION__SENDS_TO_TRANSPORT:
 			setSendsToTransport((Transport) newValue);
 			return;
+		case LinhaDeProducaoPackage.FABRICATION__CAP_BROCA:
+			setCapBroca((Double) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -967,6 +1015,9 @@ public class FabricationImpl extends ResourceImpl implements Fabrication {
 		case LinhaDeProducaoPackage.FABRICATION__SENDS_TO_TRANSPORT:
 			setSendsToTransport((Transport) null);
 			return;
+		case LinhaDeProducaoPackage.FABRICATION__CAP_BROCA:
+			setCapBroca(CAP_BROCA_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1011,6 +1062,8 @@ public class FabricationImpl extends ResourceImpl implements Fabrication {
 			return to != null;
 		case LinhaDeProducaoPackage.FABRICATION__SENDS_TO_TRANSPORT:
 			return sendsToTransport != null;
+		case LinhaDeProducaoPackage.FABRICATION__CAP_BROCA:
+			return capBroca != CAP_BROCA_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1052,6 +1105,8 @@ public class FabricationImpl extends ResourceImpl implements Fabrication {
 		result.append(vidaFerr);
 		result.append(", trocaFerr: ");
 		result.append(trocaFerr);
+		result.append(", capBroca: ");
+		result.append(capBroca);
 		result.append(')');
 		return result.toString();
 	}

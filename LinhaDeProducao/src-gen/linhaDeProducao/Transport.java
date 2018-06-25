@@ -16,6 +16,7 @@ package linhaDeProducao;
  *   <li>{@link linhaDeProducao.Transport#getCusMovi <em>Cus Movi</em>}</li>
  *   <li>{@link linhaDeProducao.Transport#getFrom <em>From</em>}</li>
  *   <li>{@link linhaDeProducao.Transport#getSendsToFabrication <em>Sends To Fabrication</em>}</li>
+ *   <li>{@link linhaDeProducao.Transport#getTempImpr <em>Temp Impr</em>}</li>
  * </ul>
  *
  * @see linhaDeProducao.LinhaDeProducaoPackage#getTransport()
@@ -154,6 +155,32 @@ public interface Transport extends Resource {
 	 * @generated
 	 */
 	void setSendsToFabrication(Fabrication value);
+
+	/**
+	 * Returns the value of the '<em><b>Temp Impr</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Temp Impr</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Temp Impr</em>' attribute.
+	 * @see #setTempImpr(double)
+	 * @see linhaDeProducao.LinhaDeProducaoPackage#getTransport_TempImpr()
+	 * @model required="true"
+	 * @generated
+	 */
+	double getTempImpr();
+
+	/**
+	 * Sets the value of the '{@link linhaDeProducao.Transport#getTempImpr <em>Temp Impr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Temp Impr</em>' attribute.
+	 * @see #getTempImpr()
+	 * @generated
+	 */
+	void setTempImpr(double value);
 
 	/**
 	 * <!-- begin-user-doc -->
