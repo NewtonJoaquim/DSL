@@ -84,8 +84,6 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cusMovi" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="from" lowerBound="1" eType="#//Fabrication"
-        eOpposite="#//Fabrication/to"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sendsToFabrication" lowerBound="1"
         eType="#//Fabrication"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tempImpr" lowerBound="1"
@@ -122,8 +120,6 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="trocaFerr" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="#//Transport"
-        eOpposite="#//Transport/from"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sendsToTransport" eType="#//Transport"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="capBroca" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>

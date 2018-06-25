@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="linhaDeProducao" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:properties-ext-widgets-reference="http://www.eclipse.org/sirius/properties/1.0.0/ext/widgets/reference" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="linhaDeProducao" version="12.0.0.2017041100">
   <ownedViewpoints name="MyViewpoint">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="simulacao" domainClass="linhaDeProducao::Simulation" enablePopupBars="true">
       <metamodel href="../../LinhaDeProducao/model/linhaDeProducao.ecore#/"/>
@@ -67,56 +67,344 @@
           </style>
         </edgeMappings>
         <toolSections>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="pieceCreation" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='piece']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Piece" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='piece']">
             <variable name="pieceContainer"/>
             <viewVariable name="pieceContainerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="linhaDeProducao::Piece" referenceName="piece" variableName="pieceInstance"/>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="linhaDeProducao::Piece" referenceName="piece" variableName="pieceInstance">
+                <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Dialog">
+                  <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                    <initialOperation/>
+                  </buttons>
+                  <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                    <initialOperation/>
+                  </buttons>
+                  <page name="PiecePage" labelExpression="Page" domainClass="linhaDeProducao::Piece" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@toolSections.0/@ownedTools[name='Piece']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.0"/>
+                  <groups name="Piece" labelExpression="Piece" domainClass="linhaDeProducao::Piece" semanticCandidateExpression="var:self">
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Piece height" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('height')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('height'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('height').changeable" valueExpression="aql:self.height">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="height" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('height').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Piece id" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('id')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('id'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('id').changeable" valueExpression="aql:self.id">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('id').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Piece length" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('length')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('length'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('length').changeable" valueExpression="aql:self.length">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="length" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('length').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Piece material" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('material')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('material'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('material').changeable" valueExpression="aql:self.material">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="material" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('material').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Piece name" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('name')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('name'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('name').changeable" valueExpression="aql:self.name">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('name').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Piece width" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('width')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('width'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('width').changeable" valueExpression="aql:self.width">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="width" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('width').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                  </groups>
+                </subModelOperations>
+              </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="fabricationCreation" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Fabrication Resource" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']">
             <variable name="fabricationContainer"/>
             <viewVariable name="fabricationContainerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="linhaDeProducao::Fabrication" referenceName="resource" variableName="fabricationInstance">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:fabricationInstance.ancestors().resource->size()"/>
+                <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Dialog">
+                  <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                    <initialOperation/>
+                  </buttons>
+                  <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                    <initialOperation/>
+                  </buttons>
+                  <page name="FabricationPage" labelExpression="Page" domainClass="linhaDeProducao::Fabrication" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@toolSections.0/@ownedTools[name='Fabrication%20Resource']/@initialOperation/@firstModelOperations/@subModelOperations.1/@groups.0"/>
+                  <groups name="Fabrication" labelExpression="Group" domainClass="linhaDeProducao::Fabrication" semanticCandidateExpression="var:self">
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Fabrication avanco" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('avanco')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('avanco'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('avanco').changeable" valueExpression="aql:self.avanco">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="avanco" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('avanco').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Fabrication capBroca" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('capBroca')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('capBroca'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('capBroca').changeable" valueExpression="aql:self.capBroca">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="capBroca" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('capBroca').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Fabrication compCorte" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('compCorte')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('compCorte'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('compCorte').changeable" valueExpression="aql:self.compCorte">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="compCorte" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('compCorte').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Fabrication custoFerr" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('custoFerr')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('custoFerr'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('custoFerr').changeable" valueExpression="aql:self.custoFerr">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="custoFerr" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('custoFerr').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Fabrication diamCorte" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('diamCorte')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('diamCorte'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('diamCorte').changeable" valueExpression="aql:self.diamCorte">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="diamCorte" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('diamCorte').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Fabrication name" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('name')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('name'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('name').changeable" valueExpression="aql:self.name">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('name').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Fabrication profCorte" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('profCorte')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('profCorte'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('profCorte').changeable" valueExpression="aql:self.profCorte">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="profCorte" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('profCorte').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Fabrication salarioMaq" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('salarioMaq')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('salarioMaq'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('salarioMaq').changeable" valueExpression="aql:self.salarioMaq">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="salarioMaq" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('salarioMaq').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Fabrication salarioOp" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('salarioOp')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('salarioOp'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('salarioOp').changeable" valueExpression="aql:self.salarioOp">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="salarioOp" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('salarioOp').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Fabrication taxaAcab" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('taxaAcab')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('taxaAcab'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('taxaAcab').changeable" valueExpression="aql:self.taxaAcab">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="taxaAcab" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('taxaAcab').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Fabrication tempImpr" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('tempImpr')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('tempImpr'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('tempImpr').changeable" valueExpression="aql:self.tempImpr">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="tempImpr" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('tempImpr').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Fabrication trocaFerr" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('trocaFerr')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('trocaFerr'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('trocaFerr').changeable" valueExpression="aql:self.trocaFerr">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="trocaFerr" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('trocaFerr').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Fabrication velAvanco" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('velAvanco')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('velAvanco'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('velAvanco').changeable" valueExpression="aql:self.velAvanco">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="velAvanco" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('velAvanco').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Fabrication velCorte" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('velCorte')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('velCorte'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('velCorte').changeable" valueExpression="aql:self.velCorte">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="velCorte" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('velCorte').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Fabrication vidaFerr" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('vidaFerr')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('vidaFerr'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('vidaFerr').changeable" valueExpression="aql:self.vidaFerr">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="vidaFerr" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('vidaFerr').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                    <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="linhaDeProducao::Fabrication sendsToTransport" referenceNameExpression="aql:'sendsToTransport'"/>
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Fabrication type" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('type')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('type'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('type').changeable" valueExpression="aql:self.type">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('type').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                  </groups>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="rotationalCreation" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']/@borderedNodeMappings[name='rotationalFeature']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="linhaDeProducao::Rotational" referenceName="feature" variableName="roationalInstance"/>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="prismaticCreation" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']/@borderedNodeMappings[name='prismaticFeature']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="linhaDeProducao::Prismatic" referenceName="feature"/>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="revolvingCreation" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']/@borderedNodeMappings[name='revolvingFeature']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="linhaDeProducao::Revolving" referenceName="feature"/>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="slabCreation" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']/@borderedNodeMappings[name='slabFeature']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="linhaDeProducao::Slab" referenceName="feature"/>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="transportCreation" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='transport']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Transport Resource" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='transport']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="linhaDeProducao::Transport" referenceName="resource">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:instance.ancestors().resource->size()"/>
+                <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Dialog">
+                  <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                    <initialOperation/>
+                  </buttons>
+                  <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                    <initialOperation/>
+                  </buttons>
+                  <page name="TransportPage" labelExpression="Page" domainClass="linhaDeProducao::Transport" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@toolSections.0/@ownedTools[name='Transport%20Resource']/@initialOperation/@firstModelOperations/@subModelOperations.1/@groups.0"/>
+                  <groups name="Transport" labelExpression="Group" domainClass="linhaDeProducao::Transport" semanticCandidateExpression="var:self">
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Transport name" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('name')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('name'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('name').changeable" valueExpression="aql:self.name">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('name').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Transport type" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('type')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('type'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('type').changeable" valueExpression="aql:self.type">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('type').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Transport velMovi" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('velMovi')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('velMovi'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('velMovi').changeable" valueExpression="aql:self.velMovi">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="velMovi" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('velMovi').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Transport distMovi" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('distMovi')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('distMovi'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('distMovi').changeable" valueExpression="aql:self.distMovi">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="distMovi" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('distMovi').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Transport cusMovi" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('cusMovi')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('cusMovi'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('cusMovi').changeable" valueExpression="aql:self.cusMovi">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="cusMovi" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('cusMovi').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                    <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="linhaDeProducao::Transport sendsToFabrication" referenceNameExpression="aql:'sendsToFabrication'"/>
+                    <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Transport tempImpr" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('tempImpr')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('tempImpr'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('tempImpr').changeable" valueExpression="aql:self.tempImpr">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="tempImpr" valueExpression="var:newValue"/>
+                      </initialOperation>
+                      <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('tempImpr').lowerBound = 1">
+                        <style>
+                          <labelFontFormat>bold</labelFontFormat>
+                        </style>
+                      </conditionalStyles>
+                    </controls>
+                  </groups>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -147,6 +435,516 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
+          <subSections name="Features" icon="/LinhaDeProducao.edit/icons/images/plus-black-symbol.png">
+            <ownedTools xsi:type="tool:ToolGroup" name="Features">
+              <tools xsi:type="tool:NodeCreationDescription" name="Rotational Feature" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']/@borderedNodeMappings[name='rotationalFeature']">
+                <variable name="container"/>
+                <viewVariable name="containerView"/>
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="linhaDeProducao::Rotational" referenceName="feature" variableName="roationalInstance">
+                    <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Dialog">
+                      <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                        <initialOperation/>
+                      </buttons>
+                      <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                        <initialOperation/>
+                      </buttons>
+                      <page name="RotationalFeaturePage" labelExpression="Page" domainClass="linhaDeProducao::Rotational" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@toolSections.0/@subSections[name='Features']/@ownedTools[name='Features']/@tools.0/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.0"/>
+                      <groups name="Rotational" labelExpression="Group" domainClass="linhaDeProducao::Rotational" semanticCandidateExpression="var:self">
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Rotational id" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('id')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('id'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('id').changeable" valueExpression="aql:self.id">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('id').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Rotational name" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('name')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('name'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('name').changeable" valueExpression="aql:self.name">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('name').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Rotational type" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('type')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('type'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('type').changeable" valueExpression="aql:self.type">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('type').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Rotational positionX" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('positionX')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('positionX'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('positionX').changeable" valueExpression="aql:self.positionX">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="positionX" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('positionX').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Rotational positionY" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('positionY')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('positionY'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('positionY').changeable" valueExpression="aql:self.positionY">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="positionY" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('positionY').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Rotational positionZ" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('positionZ')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('positionZ'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('positionZ').changeable" valueExpression="aql:self.positionZ">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="positionZ" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('positionZ').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Rotational oritentation" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('oritentation')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('oritentation'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('oritentation').changeable" valueExpression="aql:self.oritentation">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="oritentation" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('oritentation').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Rotational codigo" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('codigo')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('codigo'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('codigo').changeable" valueExpression="aql:self.codigo">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="codigo" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('codigo').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Rotational width" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('width')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('width'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('width').changeable" valueExpression="aql:self.width">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="width" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('width').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Rotational diametroMenor" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('diametroMenor')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('diametroMenor'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('diametroMenor').changeable" valueExpression="aql:self.diametroMenor">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="diametroMenor" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('diametroMenor').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Rotational diametroMaior" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('diametroMaior')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('diametroMaior'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('diametroMaior').changeable" valueExpression="aql:self.diametroMaior">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="diametroMaior" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('diametroMaior').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                      </groups>
+                    </subModelOperations>
+                  </firstModelOperations>
+                </initialOperation>
+              </tools>
+              <tools xsi:type="tool:NodeCreationDescription" name="Prismatic Feature" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']/@borderedNodeMappings[name='prismaticFeature']">
+                <variable name="container"/>
+                <viewVariable name="containerView"/>
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="linhaDeProducao::Prismatic" referenceName="feature">
+                    <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Dialog">
+                      <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                        <initialOperation/>
+                      </buttons>
+                      <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                        <initialOperation/>
+                      </buttons>
+                      <page name="PrismaticFeaturePage" labelExpression="Page" domainClass="linhaDeProducao::Prismatic" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@toolSections.0/@subSections[name='Features']/@ownedTools[name='Features']/@tools.1/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.0"/>
+                      <groups name="Prismatic" labelExpression="Group" domainClass="linhaDeProducao::Prismatic" semanticCandidateExpression="var:self">
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Prismatic id" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('id')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('id'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('id').changeable" valueExpression="aql:self.id">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('id').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Prismatic name" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('name')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('name'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('name').changeable" valueExpression="aql:self.name">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('name').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Prismatic type" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('type')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('type'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('type').changeable" valueExpression="aql:self.type">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('type').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Prismatic positionX" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('positionX')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('positionX'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('positionX').changeable" valueExpression="aql:self.positionX">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="positionX" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('positionX').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Prismatic positionY" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('positionY')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('positionY'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('positionY').changeable" valueExpression="aql:self.positionY">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="positionY" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('positionY').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Prismatic positionZ" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('positionZ')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('positionZ'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('positionZ').changeable" valueExpression="aql:self.positionZ">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="positionZ" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('positionZ').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Prismatic oritentation" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('oritentation')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('oritentation'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('oritentation').changeable" valueExpression="aql:self.oritentation">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="oritentation" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('oritentation').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Prismatic codigo" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('codigo')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('codigo'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('codigo').changeable" valueExpression="aql:self.codigo">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="codigo" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('codigo').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Prismatic width" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('width')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('width'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('width').changeable" valueExpression="aql:self.width">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="width" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('width').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Prismatic heigth" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('heigth')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('heigth'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('heigth').changeable" valueExpression="aql:self.heigth">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="heigth" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('heigth').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Prismatic length" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('length')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('length'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('length').changeable" valueExpression="aql:self.length">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="length" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('length').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                      </groups>
+                    </subModelOperations>
+                  </firstModelOperations>
+                </initialOperation>
+              </tools>
+              <tools xsi:type="tool:NodeCreationDescription" name="Slab Feature" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']/@borderedNodeMappings[name='slabFeature']">
+                <variable name="container"/>
+                <viewVariable name="containerView"/>
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="linhaDeProducao::Slab" referenceName="feature">
+                    <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Dialog">
+                      <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                        <initialOperation/>
+                      </buttons>
+                      <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                        <initialOperation/>
+                      </buttons>
+                      <page name="SlabFeaturePage" labelExpression="Page" domainClass="linhaDeProducao::Slab" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@toolSections.0/@subSections[name='Features']/@ownedTools[name='Features']/@tools.2/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.0"/>
+                      <groups name="Slab" labelExpression="Group" domainClass="linhaDeProducao::Slab" semanticCandidateExpression="var:self">
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Slab id" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('id')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('id'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('id').changeable" valueExpression="aql:self.id">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('id').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Slab name" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('name')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('name'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('name').changeable" valueExpression="aql:self.name">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('name').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Slab type" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('type')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('type'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('type').changeable" valueExpression="aql:self.type">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('type').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Slab positionX" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('positionX')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('positionX'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('positionX').changeable" valueExpression="aql:self.positionX">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="positionX" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('positionX').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Slab positionY" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('positionY')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('positionY'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('positionY').changeable" valueExpression="aql:self.positionY">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="positionY" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('positionY').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Slab positionZ" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('positionZ')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('positionZ'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('positionZ').changeable" valueExpression="aql:self.positionZ">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="positionZ" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('positionZ').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Slab oritentation" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('oritentation')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('oritentation'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('oritentation').changeable" valueExpression="aql:self.oritentation">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="oritentation" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('oritentation').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Slab codigo" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('codigo')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('codigo'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('codigo').changeable" valueExpression="aql:self.codigo">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="codigo" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('codigo').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Slab width" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('width')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('width'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('width').changeable" valueExpression="aql:self.width">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="width" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('width').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Slab heigth" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('heigth')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('heigth'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('heigth').changeable" valueExpression="aql:self.heigth">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="heigth" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('heigth').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Slab length" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('length')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('length'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('length').changeable" valueExpression="aql:self.length">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="length" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('length').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                      </groups>
+                    </subModelOperations>
+                  </firstModelOperations>
+                </initialOperation>
+              </tools>
+              <tools xsi:type="tool:NodeCreationDescription" name="Revolving Feature" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@nodeMappings[name='fabrication']/@borderedNodeMappings[name='revolvingFeature']">
+                <variable name="container"/>
+                <viewVariable name="containerView"/>
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="linhaDeProducao::Revolving" referenceName="feature">
+                    <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Dialog">
+                      <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                        <initialOperation/>
+                      </buttons>
+                      <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                        <initialOperation/>
+                      </buttons>
+                      <page name="RevolvingFeaturePage" labelExpression="Page" domainClass="linhaDeProducao::Revolving" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='simulacao']/@defaultLayer/@toolSections.0/@subSections[name='Features']/@ownedTools[name='Features']/@tools.3/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.0"/>
+                      <groups name="Revolving" labelExpression="Group" domainClass="linhaDeProducao::Revolving" semanticCandidateExpression="var:self">
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Revolving id" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('id')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('id'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('id').changeable" valueExpression="aql:self.id">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('id').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Revolving name" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('name')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('name'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('name').changeable" valueExpression="aql:self.name">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('name').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Revolving type" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('type')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('type'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('type').changeable" valueExpression="aql:self.type">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('type').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Revolving positionX" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('positionX')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('positionX'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('positionX').changeable" valueExpression="aql:self.positionX">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="positionX" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('positionX').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Revolving positionY" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('positionY')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('positionY'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('positionY').changeable" valueExpression="aql:self.positionY">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="positionY" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('positionY').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Revolving positionZ" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('positionZ')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('positionZ'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('positionZ').changeable" valueExpression="aql:self.positionZ">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="positionZ" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('positionZ').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Revolving oritentation" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('oritentation')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('oritentation'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('oritentation').changeable" valueExpression="aql:self.oritentation">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="oritentation" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('oritentation').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Revolving codigo" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('codigo')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('codigo'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('codigo').changeable" valueExpression="aql:self.codigo">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="codigo" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('codigo').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Revolving diameter" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('diameter')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('diameter'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('diameter').changeable" valueExpression="aql:self.diameter">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="diameter" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('diameter').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                        <controls xsi:type="properties:TextDescription" name="linhaDeProducao::Revolving height" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('height')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('height'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('height').changeable" valueExpression="aql:self.height">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool_1:SetValue" featureName="height" valueExpression="var:newValue"/>
+                          </initialOperation>
+                          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('height').lowerBound = 1">
+                            <style>
+                              <labelFontFormat>bold</labelFontFormat>
+                            </style>
+                          </conditionalStyles>
+                        </controls>
+                      </groups>
+                    </subModelOperations>
+                  </firstModelOperations>
+                </initialOperation>
+              </tools>
+            </ownedTools>
+          </subSections>
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>

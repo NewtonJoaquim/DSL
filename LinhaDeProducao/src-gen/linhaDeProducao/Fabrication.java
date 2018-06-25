@@ -27,7 +27,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link linhaDeProducao.Fabrication#getTaxaAcab <em>Taxa Acab</em>}</li>
  *   <li>{@link linhaDeProducao.Fabrication#getVidaFerr <em>Vida Ferr</em>}</li>
  *   <li>{@link linhaDeProducao.Fabrication#getTrocaFerr <em>Troca Ferr</em>}</li>
- *   <li>{@link linhaDeProducao.Fabrication#getTo <em>To</em>}</li>
  *   <li>{@link linhaDeProducao.Fabrication#getSendsToTransport <em>Sends To Transport</em>}</li>
  *   <li>{@link linhaDeProducao.Fabrication#getCapBroca <em>Cap Broca</em>}</li>
  * </ul>
@@ -390,34 +389,6 @@ public interface Fabrication extends Resource {
 	 * @generated
 	 */
 	void setTrocaFerr(double value);
-
-	/**
-	 * Returns the value of the '<em><b>To</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link linhaDeProducao.Transport#getFrom <em>From</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>To</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>To</em>' reference.
-	 * @see #setTo(Transport)
-	 * @see linhaDeProducao.LinhaDeProducaoPackage#getFabrication_To()
-	 * @see linhaDeProducao.Transport#getFrom
-	 * @model opposite="from"
-	 * @generated
-	 */
-	Transport getTo();
-
-	/**
-	 * Sets the value of the '{@link linhaDeProducao.Fabrication#getTo <em>To</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>To</em>' reference.
-	 * @see #getTo()
-	 * @generated
-	 */
-	void setTo(Transport value);
 
 	/**
 	 * Returns the value of the '<em><b>Sends To Transport</b></em>' reference.

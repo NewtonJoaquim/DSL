@@ -44,7 +44,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link linhaDeProducao.impl.FabricationImpl#getTaxaAcab <em>Taxa Acab</em>}</li>
  *   <li>{@link linhaDeProducao.impl.FabricationImpl#getVidaFerr <em>Vida Ferr</em>}</li>
  *   <li>{@link linhaDeProducao.impl.FabricationImpl#getTrocaFerr <em>Troca Ferr</em>}</li>
- *   <li>{@link linhaDeProducao.impl.FabricationImpl#getTo <em>To</em>}</li>
  *   <li>{@link linhaDeProducao.impl.FabricationImpl#getSendsToTransport <em>Sends To Transport</em>}</li>
  *   <li>{@link linhaDeProducao.impl.FabricationImpl#getCapBroca <em>Cap Broca</em>}</li>
  * </ul>
@@ -321,16 +320,6 @@ public class FabricationImpl extends ResourceImpl implements Fabrication {
 	 * @ordered
 	 */
 	protected double trocaFerr = TROCA_FERR_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getTo() <em>To</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTo()
-	 * @generated
-	 * @ordered
-	 */
-	protected Transport to;
 
 	/**
 	 * The cached value of the '{@link #getSendsToTransport() <em>Sends To Transport</em>}' reference.
@@ -685,74 +674,6 @@ public class FabricationImpl extends ResourceImpl implements Fabrication {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Transport getTo() {
-		if (to != null && to.eIsProxy()) {
-			InternalEObject oldTo = (InternalEObject) to;
-			to = (Transport) eResolveProxy(oldTo);
-			if (to != oldTo) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, LinhaDeProducaoPackage.FABRICATION__TO,
-							oldTo, to));
-			}
-		}
-		return to;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Transport basicGetTo() {
-		return to;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetTo(Transport newTo, NotificationChain msgs) {
-		Transport oldTo = to;
-		to = newTo;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					LinhaDeProducaoPackage.FABRICATION__TO, oldTo, newTo);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTo(Transport newTo) {
-		if (newTo != to) {
-			NotificationChain msgs = null;
-			if (to != null)
-				msgs = ((InternalEObject) to).eInverseRemove(this, LinhaDeProducaoPackage.TRANSPORT__FROM,
-						Transport.class, msgs);
-			if (newTo != null)
-				msgs = ((InternalEObject) newTo).eInverseAdd(this, LinhaDeProducaoPackage.TRANSPORT__FROM,
-						Transport.class, msgs);
-			msgs = basicSetTo(newTo, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LinhaDeProducaoPackage.FABRICATION__TO, newTo,
-					newTo));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Transport getSendsToTransport() {
 		if (sendsToTransport != null && sendsToTransport.eIsProxy()) {
 			InternalEObject oldSendsToTransport = (InternalEObject) sendsToTransport;
@@ -817,29 +738,10 @@ public class FabricationImpl extends ResourceImpl implements Fabrication {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case LinhaDeProducaoPackage.FABRICATION__TO:
-			if (to != null)
-				msgs = ((InternalEObject) to).eInverseRemove(this, LinhaDeProducaoPackage.TRANSPORT__FROM,
-						Transport.class, msgs);
-			return basicSetTo((Transport) otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case LinhaDeProducaoPackage.FABRICATION__FEATURE:
 			return ((InternalEList<?>) getFeature()).basicRemove(otherEnd, msgs);
-		case LinhaDeProducaoPackage.FABRICATION__TO:
-			return basicSetTo(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -880,10 +782,6 @@ public class FabricationImpl extends ResourceImpl implements Fabrication {
 			return getVidaFerr();
 		case LinhaDeProducaoPackage.FABRICATION__TROCA_FERR:
 			return getTrocaFerr();
-		case LinhaDeProducaoPackage.FABRICATION__TO:
-			if (resolve)
-				return getTo();
-			return basicGetTo();
 		case LinhaDeProducaoPackage.FABRICATION__SENDS_TO_TRANSPORT:
 			if (resolve)
 				return getSendsToTransport();
@@ -946,9 +844,6 @@ public class FabricationImpl extends ResourceImpl implements Fabrication {
 		case LinhaDeProducaoPackage.FABRICATION__TROCA_FERR:
 			setTrocaFerr((Double) newValue);
 			return;
-		case LinhaDeProducaoPackage.FABRICATION__TO:
-			setTo((Transport) newValue);
-			return;
 		case LinhaDeProducaoPackage.FABRICATION__SENDS_TO_TRANSPORT:
 			setSendsToTransport((Transport) newValue);
 			return;
@@ -1009,9 +904,6 @@ public class FabricationImpl extends ResourceImpl implements Fabrication {
 		case LinhaDeProducaoPackage.FABRICATION__TROCA_FERR:
 			setTrocaFerr(TROCA_FERR_EDEFAULT);
 			return;
-		case LinhaDeProducaoPackage.FABRICATION__TO:
-			setTo((Transport) null);
-			return;
 		case LinhaDeProducaoPackage.FABRICATION__SENDS_TO_TRANSPORT:
 			setSendsToTransport((Transport) null);
 			return;
@@ -1058,8 +950,6 @@ public class FabricationImpl extends ResourceImpl implements Fabrication {
 			return vidaFerr != VIDA_FERR_EDEFAULT;
 		case LinhaDeProducaoPackage.FABRICATION__TROCA_FERR:
 			return trocaFerr != TROCA_FERR_EDEFAULT;
-		case LinhaDeProducaoPackage.FABRICATION__TO:
-			return to != null;
 		case LinhaDeProducaoPackage.FABRICATION__SENDS_TO_TRANSPORT:
 			return sendsToTransport != null;
 		case LinhaDeProducaoPackage.FABRICATION__CAP_BROCA:

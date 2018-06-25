@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <linhaDeProducao:Simulation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:linhaDeProducao="http://eclipse.com/obeoum/projects/linhaDeProducao" name="simulacao">
-  <resource xsi:type="linhaDeProducao:Fabrication" sendsToTransport="//@resource.3">
+  <resource xsi:type="linhaDeProducao:Fabrication" id="1" sendsToTransport="//@resource.1">
     <feature xsi:type="linhaDeProducao:Prismatic"/>
+    <feature xsi:type="linhaDeProducao:Rotational"/>
   </resource>
-  <resource xsi:type="linhaDeProducao:Fabrication"/>
-  <resource xsi:type="linhaDeProducao:Fabrication" id="3"/>
-  <resource xsi:type="linhaDeProducao:Transport" id="4" sendsToFabrication="//@resource.1"/>
-  <piece/>
+  <resource xsi:type="linhaDeProducao:Transport" id="2" sendsToFabrication="//@resource.2"/>
+  <resource xsi:type="linhaDeProducao:Fabrication" id="3">
+    <feature xsi:type="linhaDeProducao:Revolving"/>
+  </resource>
+  <piece id="1" name="Peca" material="ACO_ABNT" width="5.0" length="20.0" height="19.0"/>
 </linhaDeProducao:Simulation>

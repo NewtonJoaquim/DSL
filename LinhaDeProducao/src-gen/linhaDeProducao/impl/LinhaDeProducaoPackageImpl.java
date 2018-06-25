@@ -645,7 +645,7 @@ public class LinhaDeProducaoPackageImpl extends EPackageImpl implements LinhaDeP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTransport_From() {
+	public EReference getTransport_SendsToFabrication() {
 		return (EReference) transportEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -654,17 +654,8 @@ public class LinhaDeProducaoPackageImpl extends EPackageImpl implements LinhaDeP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTransport_SendsToFabrication() {
-		return (EReference) transportEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getTransport_TempImpr() {
-		return (EAttribute) transportEClass.getEStructuralFeatures().get(5);
+		return (EAttribute) transportEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -825,7 +816,7 @@ public class LinhaDeProducaoPackageImpl extends EPackageImpl implements LinhaDeP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFabrication_To() {
+	public EReference getFabrication_SendsToTransport() {
 		return (EReference) fabricationEClass.getEStructuralFeatures().get(14);
 	}
 
@@ -834,17 +825,8 @@ public class LinhaDeProducaoPackageImpl extends EPackageImpl implements LinhaDeP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFabrication_SendsToTransport() {
-		return (EReference) fabricationEClass.getEStructuralFeatures().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getFabrication_CapBroca() {
-		return (EAttribute) fabricationEClass.getEStructuralFeatures().get(16);
+		return (EAttribute) fabricationEClass.getEStructuralFeatures().get(15);
 	}
 
 	/**
@@ -990,7 +972,6 @@ public class LinhaDeProducaoPackageImpl extends EPackageImpl implements LinhaDeP
 		createEAttribute(transportEClass, TRANSPORT__VEL_MOVI);
 		createEAttribute(transportEClass, TRANSPORT__DIST_MOVI);
 		createEAttribute(transportEClass, TRANSPORT__CUS_MOVI);
-		createEReference(transportEClass, TRANSPORT__FROM);
 		createEReference(transportEClass, TRANSPORT__SENDS_TO_FABRICATION);
 		createEAttribute(transportEClass, TRANSPORT__TEMP_IMPR);
 		createEOperation(transportEClass, TRANSPORT___COMPUTE_TIME);
@@ -1011,7 +992,6 @@ public class LinhaDeProducaoPackageImpl extends EPackageImpl implements LinhaDeP
 		createEAttribute(fabricationEClass, FABRICATION__TAXA_ACAB);
 		createEAttribute(fabricationEClass, FABRICATION__VIDA_FERR);
 		createEAttribute(fabricationEClass, FABRICATION__TROCA_FERR);
-		createEReference(fabricationEClass, FABRICATION__TO);
 		createEReference(fabricationEClass, FABRICATION__SENDS_TO_TRANSPORT);
 		createEAttribute(fabricationEClass, FABRICATION__CAP_BROCA);
 		createEOperation(fabricationEClass, FABRICATION___COMPUTE_TIME);
@@ -1183,9 +1163,6 @@ public class LinhaDeProducaoPackageImpl extends EPackageImpl implements LinhaDeP
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTransport_CusMovi(), ecorePackage.getEDouble(), "cusMovi", null, 1, 1, Transport.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTransport_From(), this.getFabrication(), this.getFabrication_To(), "from", null, 1, 1,
-				Transport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTransport_SendsToFabrication(), this.getFabrication(), null, "sendsToFabrication", null, 1, 1,
 				Transport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1237,9 +1214,6 @@ public class LinhaDeProducaoPackageImpl extends EPackageImpl implements LinhaDeP
 		initEAttribute(getFabrication_TrocaFerr(), ecorePackage.getEDouble(), "trocaFerr", null, 1, 1,
 				Fabrication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEReference(getFabrication_To(), this.getTransport(), this.getTransport_From(), "to", null, 0, 1,
-				Fabrication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFabrication_SendsToTransport(), this.getTransport(), null, "sendsToTransport", null, 0, 1,
 				Fabrication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

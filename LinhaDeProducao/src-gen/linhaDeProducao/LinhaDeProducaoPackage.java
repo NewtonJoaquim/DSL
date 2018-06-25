@@ -984,22 +984,13 @@ public interface LinhaDeProducaoPackage extends EPackage {
 	int TRANSPORT__CUS_MOVI = RESOURCE_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>From</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSPORT__FROM = RESOURCE_FEATURE_COUNT + 3;
-
-	/**
 	 * The feature id for the '<em><b>Sends To Fabrication</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSPORT__SENDS_TO_FABRICATION = RESOURCE_FEATURE_COUNT + 4;
+	int TRANSPORT__SENDS_TO_FABRICATION = RESOURCE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Temp Impr</b></em>' attribute.
@@ -1008,7 +999,7 @@ public interface LinhaDeProducaoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSPORT__TEMP_IMPR = RESOURCE_FEATURE_COUNT + 5;
+	int TRANSPORT__TEMP_IMPR = RESOURCE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Transport</em>' class.
@@ -1017,7 +1008,7 @@ public interface LinhaDeProducaoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSPORT_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 6;
+	int TRANSPORT_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Compute Time</em>' operation.
@@ -1210,22 +1201,13 @@ public interface LinhaDeProducaoPackage extends EPackage {
 	int FABRICATION__TROCA_FERR = RESOURCE_FEATURE_COUNT + 13;
 
 	/**
-	 * The feature id for the '<em><b>To</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FABRICATION__TO = RESOURCE_FEATURE_COUNT + 14;
-
-	/**
 	 * The feature id for the '<em><b>Sends To Transport</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FABRICATION__SENDS_TO_TRANSPORT = RESOURCE_FEATURE_COUNT + 15;
+	int FABRICATION__SENDS_TO_TRANSPORT = RESOURCE_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Cap Broca</b></em>' attribute.
@@ -1234,7 +1216,7 @@ public interface LinhaDeProducaoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FABRICATION__CAP_BROCA = RESOURCE_FEATURE_COUNT + 16;
+	int FABRICATION__CAP_BROCA = RESOURCE_FEATURE_COUNT + 15;
 
 	/**
 	 * The number of structural features of the '<em>Fabrication</em>' class.
@@ -1243,7 +1225,7 @@ public interface LinhaDeProducaoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FABRICATION_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 17;
+	int FABRICATION_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 16;
 
 	/**
 	 * The operation id for the '<em>Compute Time</em>' operation.
@@ -1890,17 +1872,6 @@ public interface LinhaDeProducaoPackage extends EPackage {
 	EAttribute getTransport_CusMovi();
 
 	/**
-	 * Returns the meta object for the reference '{@link linhaDeProducao.Transport#getFrom <em>From</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>From</em>'.
-	 * @see linhaDeProducao.Transport#getFrom()
-	 * @see #getTransport()
-	 * @generated
-	 */
-	EReference getTransport_From();
-
-	/**
 	 * Returns the meta object for the reference '{@link linhaDeProducao.Transport#getSendsToFabrication <em>Sends To Fabrication</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2105,17 +2076,6 @@ public interface LinhaDeProducaoPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getFabrication_TrocaFerr();
-
-	/**
-	 * Returns the meta object for the reference '{@link linhaDeProducao.Fabrication#getTo <em>To</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>To</em>'.
-	 * @see linhaDeProducao.Fabrication#getTo()
-	 * @see #getFabrication()
-	 * @generated
-	 */
-	EReference getFabrication_To();
 
 	/**
 	 * Returns the meta object for the reference '{@link linhaDeProducao.Fabrication#getSendsToTransport <em>Sends To Transport</em>}'.
@@ -2666,14 +2626,6 @@ public interface LinhaDeProducaoPackage extends EPackage {
 		EAttribute TRANSPORT__CUS_MOVI = eINSTANCE.getTransport_CusMovi();
 
 		/**
-		 * The meta object literal for the '<em><b>From</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TRANSPORT__FROM = eINSTANCE.getTransport_From();
-
-		/**
 		 * The meta object literal for the '<em><b>Sends To Fabrication</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2826,14 +2778,6 @@ public interface LinhaDeProducaoPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FABRICATION__TROCA_FERR = eINSTANCE.getFabrication_TrocaFerr();
-
-		/**
-		 * The meta object literal for the '<em><b>To</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FABRICATION__TO = eINSTANCE.getFabrication_To();
 
 		/**
 		 * The meta object literal for the '<em><b>Sends To Transport</b></em>' reference feature.

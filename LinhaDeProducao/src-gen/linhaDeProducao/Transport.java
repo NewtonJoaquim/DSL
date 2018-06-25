@@ -14,7 +14,6 @@ package linhaDeProducao;
  *   <li>{@link linhaDeProducao.Transport#getVelMovi <em>Vel Movi</em>}</li>
  *   <li>{@link linhaDeProducao.Transport#getDistMovi <em>Dist Movi</em>}</li>
  *   <li>{@link linhaDeProducao.Transport#getCusMovi <em>Cus Movi</em>}</li>
- *   <li>{@link linhaDeProducao.Transport#getFrom <em>From</em>}</li>
  *   <li>{@link linhaDeProducao.Transport#getSendsToFabrication <em>Sends To Fabrication</em>}</li>
  *   <li>{@link linhaDeProducao.Transport#getTempImpr <em>Temp Impr</em>}</li>
  * </ul>
@@ -101,34 +100,6 @@ public interface Transport extends Resource {
 	 * @generated
 	 */
 	void setCusMovi(double value);
-
-	/**
-	 * Returns the value of the '<em><b>From</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link linhaDeProducao.Fabrication#getTo <em>To</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>From</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>From</em>' reference.
-	 * @see #setFrom(Fabrication)
-	 * @see linhaDeProducao.LinhaDeProducaoPackage#getTransport_From()
-	 * @see linhaDeProducao.Fabrication#getTo
-	 * @model opposite="to" required="true"
-	 * @generated
-	 */
-	Fabrication getFrom();
-
-	/**
-	 * Sets the value of the '{@link linhaDeProducao.Transport#getFrom <em>From</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>From</em>' reference.
-	 * @see #getFrom()
-	 * @generated
-	 */
-	void setFrom(Fabrication value);
 
 	/**
 	 * Returns the value of the '<em><b>Sends To Fabrication</b></em>' reference.
