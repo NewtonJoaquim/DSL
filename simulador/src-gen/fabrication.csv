@@ -1,15 +1,14 @@
 
 		
-			1  Fabricacao 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 2
-					0 0 Prismatica  0.0 0.0 0.0 0 0 0 0.0 0.0 0.0
-					0 0 Rotacional  0.0 0 0 0.0 0.0 0 0.0 0.0 0.0
+			1 fabricacao1 Fabricacao 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 2
+					0 0 Prismatica Prismatic1 0.0 0.0 0.0 0 0 0 0.0 0.0 0.0
 
 
 		
 
 		
-			3  Fabricacao 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 invalid
-					0 0 Circular  0 0 0.0 0 0 0.0 0.0 0.0 0.0
+			3 fabricacao2 Fabricacao 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 invalid
+					0 0 Cavidade Slab1 0.0 0.0 0.0 0 0 0 0.0 0.0 0.0
 
 
 
