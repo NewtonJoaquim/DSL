@@ -1,5 +1,9 @@
 # DSL
 Trabalho de DSL para a cadeira de Tópicos Avançados em Engenharia de Software
+
+# Introdução
+O objetivo desta linguagem é a geração de Peças, Features e Recursos de fabricação e transporte para a simulação de uma linha de produção e o cálculo de tempo, custo, etc.
+
 # Configurando o Ambiente
 1. Importar para o workspace todos os projetos exceto 'simulador'
 1. Caso necessário, criar a pasta src dentro do projeto "LinhaDeProducao"
